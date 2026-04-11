@@ -230,6 +230,8 @@ if (cursorStealth && cursorGlow) {
   });
 
   // Detection Tripwire & Global Deterrent
+  if (window.matchMedia('(any-pointer: coarse)').matches) return;
+
   let devtoolsOpen = false;
   const threshold = 160;
 

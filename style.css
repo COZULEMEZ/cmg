@@ -892,9 +892,11 @@ body::after {
   opacity: 0.04;
 }
 
-/* Hide default cursor globally */
-body { cursor: none; }
-a, button, input, textarea, .faq-question, .dsp-item { cursor: none !important; }
+/* Hide default cursor only on devices with a mouse */
+@media (any-pointer: fine) {
+  body { cursor: none; }
+  a, button, input, textarea, .faq-question, .dsp-item { cursor: none !important; }
+}
 
 /* Custom Stealth Metallic Cursor & RGB Aura */
 .cursor-stealth {
@@ -949,4 +951,11 @@ body.hovering .cursor-glow-inner {
   opacity: 1;
   transition: opacity 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.page-loader.loaded { opacity: 0; }
+.page-loader.loaded { opacity: 0; }
+
+/* Desktop-only elements deterrent */
+@media (any-pointer: coarse) {
+  .cursor-stealth, .cursor-glow-container {
+    display: none !important;
+  }
+}
