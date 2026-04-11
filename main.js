@@ -1,3 +1,7 @@
+// Vercel Web Analytics
+import { inject } from '@vercel/analytics';
+inject();
+
 // Intersection Observer for stable scroll animations
 const observerOptions = {
   root: null,
