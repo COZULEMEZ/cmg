@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =============================== -->
+  <!-- 1. CORE META & TITLE            -->
+  <!-- =============================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMG | Unrivaled Music Distribution & 24h Delivery</title>
+  <meta name="description" content="Cozulemez Music Group (CMG) provides an elite music distribution infrastructure globally. Achieve seamless integration across all digital platforms within 24 hours." />
+  <meta name="keywords" content="music distribution, independent label, global music dist, 24h delivery, premier distributor, CMG, Cozulemez Music Group, elite artists" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cmg.gl/" />
+  
+  <link rel="alternate" hreflang="tr" href="https://cmg.gl/tr/" />
+  <link rel="alternate" hreflang="en" href="https://cmg.gl/" />
+  <link rel="alternate" hreflang="x-default" href="https://cmg.gl/" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+  
+  <!-- Auto-Routing removed to default to English -->
+  
+  <!-- =============================== -->
+  <!-- 2. SOCIAL CARDS (OG & TWITTER)  -->
+  <!-- =============================== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cmg.gl/" />
+  <meta property="og:title" content="CMG | Elite 24h Music Distribution" />
+  <meta property="og:description" content="Cozulemez Music Group provides an uncompromising elite music distribution infrastructure globally. Your catalog goes live within precisely 24 hours." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1593693411515-c20201ad7d27?auto=format&fit=crop&q=80&w=1200" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://cmg.gl/" />
+  <meta name="twitter:title" content="CMG | Elite 24h Music Distribution" />
+  <meta name="twitter:description" content="Cozulemez Music Group provides the definitive fastest music distribution globally. Experience surgical catalog placement within 24 hours." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1593693411515-c20201ad7d27?auto=format&fit=crop&q=80&w=1200" />
+
+  <!-- =============================== -->
+  <!-- 3. ADVANCED SEO: JSON-LD SCHEMA -->
+  <!-- =============================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://cmg.gl/#organization",
+        "name": "Cozulemez Music Group (CMG)",
+        "url": "https://cmg.gl/",
+        "logo": "https://cmg.gl/vite.svg",
+        "description": "Premium independent distributor providing fastest music dist infrastructure globally.",
+        "sameAs": [
+          "https://instagram.com/cmg.gl"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://cmg.gl/#website",
+        "url": "https://cmg.gl/",
+        "name": "CMG | Global Music Distribution",
+        "publisher": {"@id": "https://cmg.gl/#organization"},
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://cmg.gl/#apply",
+          "query-input": "required name=apply"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "24h Music Distribution",
+        "serviceType": "Digital Asset Syndication",
+        "provider": {"@id": "https://cmg.gl/#organization"},
+        "areaServed": "Global",
+        "description": "Unrivaled 24-hour delivery of digital music assets to 150+ global DSPs."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "24 saatte (24h) müzik dist nasıl çalışıyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CMG altyapısı, DSP'lerle doğrudan API bağlantısına sahiptir. Onaylanan parçanız manuel işlem beklemeden sıraya alınır ve aynı gün Spotify, Apple Music gibi devlere iletilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Müzik dağıtımında haklarımı devrediyor muyum?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Asla. CMG ile %100 kendi materyalinize sahip olursunuz. Biz size aracı bir teknoloji ve PR desteği sunarız, master haklarınız tamamen size aittir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "CMG Müzik Dağıtımı kimler içindir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Global vizyonu olan bağımsız sanatçılar, etiketler (label) ve hızlı büyüme stratejisi güden elit projeler içindir."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- =============================== -->
+  <!-- 4. ASSETS & PERFORMANCE         -->
+  <!-- =============================== -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-loader" id="pageLoader"></div>
+  <div class="cursor-glow-container" id="cursorGlow">
+    <div class="cursor-glow-inner"></div>
+  </div>
+  <div class="cursor-stealth" id="cursorStealth"></div>
+
+  <!-- =============================== -->
+  <!-- GLOBAL HEADER NAVIGATION        -->
+  <!-- =============================== -->
+  <header>
+    <div class="container container-wide">
+      <nav aria-label="Main Navigation">
+        <div class="logo">
+          <a href="#home" aria-label="CMG Homepage">CMG<span aria-hidden="true">.</span></a>
+        </div>
+        <div class="nav-links" role="menubar">
+          <a href="#distribution" role="menuitem">DISTRIBUTION</a>
+          <a href="#pr" role="menuitem">GLOBAL PR</a>
+          <a href="#tech" role="menuitem">TECHNOLOGY</a>
+          <a href="#partners" role="menuitem">PARTNERS</a>
+          <div style="width: 1px; background: rgba(255,255,255,0.15); margin: 0 8px;"></div>
+          <div style="display: flex; gap: 12px;">
+            <a href="/tr/" role="menuitem">TR</a>
+            <a href="#" style="color:#fff; font-weight:800; cursor:default;" role="menuitem">EN</a>
+          </div>
+        </div>
+        <div class="header-cta">
+          <a href="#apply" class="btn-minimal" aria-label="Apply to join CMG">APPLY NOW</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =============================== -->
+  <!-- MAIN CONTENT AREA               -->
+  <!-- =============================== -->
+  <main id="main-content">
+    <!-- Zenith Hero -->
+    <section id="home" class="hero-zenith">
+      <!-- Decorative background glows -->
+      <div class="bg-glow" style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(75,102,255,0.15) 0%, rgba(0,0,0,0) 70%); top: -10%; left: -10%; border-radius: 50%; z-index: 0; pointer-events: none; animation: pulse 8s infinite alternate;"></div>
+      <div class="bg-glow" style="position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(159,85,255,0.1) 0%, rgba(0,0,0,0) 70%); bottom: -20%; right: -5%; border-radius: 50%; z-index: 0; pointer-events: none; animation: pulse 6s infinite alternate-reverse;"></div>
+
+      <div class="container hero-container" style="position: relative; z-index: 10;">
+        <div class="hero-text-content fade-in-up">
+          <span class="hero-badge">A NEW ECHELON IN THE MUSIC INDUSTRY</span>
+          <h1 class="hero-main-title">The New Intelligence in<br><span class="gradient-text">Music Distribution.</span></h1>
+          <p class="hero-description">
+            Cozulemez Music Group (CMG) represents a flawless music distribution ecosystem engineered exclusively for elite artists, premium labels, and visionary projects. Achieve absolute and seamless integration across all global digital platforms with surgical precision within exactly 24 hours.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#apply" class="btn-primary">Initiate Application</a>
+            <a href="#distribution" class="btn-secondary">Explore Ecosystem →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Distribution Section -->
+    <section id="distribution" class="distribution-detail">
+      <div class="container">
+        <div class="section-intro fade-in-up">
+          <h2 class="title-xl">Global Distribution<br>for Elite Projects.</h2>
+          <p class="intro-large">
+            We do not merely upload music to systems; we strategically position it for global expansion backed by pinpoint marketing intelligence.
+          </p>
+        </div>
+
+        <div class="zenith-grid">
+          <div class="detail-card fade-in-up">
+            <h3>24-Hour Global Access</h3>
+            <p>Direct API integration with over 150 elite digital partners worldwide. Our unrivaled distribution technology guarantees your catalog's definitive placement within exactly <strong>24 hours</strong>.</p>
+          </div>
+          <div class="detail-card fade-in-up">
+            <h3>The Strategic Human Element</h3>
+            <p>We strictly curate an exclusive, high-tier music catalog. This uncompromising standard allows us to provide profound, beyond-automation A&amp;R analysis and strategic music consulting for every partner.</p>
+          </div>
+          <div class="detail-card fade-in-up">
+            <h3>Absolute Royalties Ownership</h3>
+            <p>We introduce an immaculately transparent framework where you retain 100% of your master rights. Scale your market presence unconditionally through CMG’s infrastructure without sacrificing control.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expanded PR Section (Tabbed Zenith) -->
+    <section id="pr" class="pr-zenith-expanded fade-in-up">
+      <div class="container pr-zenith-container">
+        <div class="pr-header">
+          <div class="pr-logo-box">CMG<span>.</span></div>
+          <h2 class="title-xl">Communication, Strategy<br>& Global Marketing.</h2>
+          <p class="intro-large">Leveraging our international network, we bestow your project with unparalleled worldwide visibility, tangible physical reach, and surgical digital growth momentum.</p>
+        </div>
+
+        <div class="pr-interactive-tabs">
+          <div class="tabs-nav">
+            <button class="tab-btn active" data-tab="press">PRESS & MEDIA</button>
+            <button class="tab-btn" data-tab="youtube">YOUTUBE INTELLIGENCE</button>
+            <button class="tab-btn" data-tab="physical">PHYSICAL PRESSING</button>
+            <button class="tab-btn" data-tab="marketing">INTERNATIONAL MARKETING</button>
+          </div>
+
+          <div class="tabs-content">
+            <div class="tab-pane active" id="press">
+              <div class="pane-grid">
+                <div class="pane-text">
+                  <h3>Strategic Media Coordination</h3>
+                  <p>We directly connect your projects with the world's leading music editors and influential tastemakers. From independent market blocs to global headlines, we architect culture-defining PR campaigns.</p>
+                  <ul class="detail-list">
+                    <li>Global Press Release Syndication</li>
+                    <li>High-Profile Interview & Media Coordination</li>
+                    <li>Bespoke Radio Airplay Placement</li>
+                  </ul>
+                </div>
+                <div class="pane-img"
+                  style="background-image: url('https://images.unsplash.com/photo-1574680077533-252ad4d0549c?auto=format&fit=crop&q=80&w=1200');">
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="youtube">
+              <div class="pane-grid">
+                <div class="pane-text">
+                  <h3>Advanced YouTube Intelligence</h3>
+                  <p>Transform your YouTube presence into an undeniable force through our expert channel optimization and Official Artist Channel (OAC) verification. We deploy transparent meta-data management that inherently scales your music to millions.</p>
+                  <ul class="detail-list">
+                    <li>Algorithmic SEO & Deep Metadata Management</li>
+                    <li>OAC Verification Procedures & Support</li>
+                    <li>Targeted Ad-Campaign Deployments</li>
+                  </ul>
+                </div>
+                <div class="pane-img"
+                  style="background-image: url('https://images.unsplash.com/photo-1593693411515-c20201ad7d27?auto=format&fit=crop&q=80&w=1200');">
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="physical">
+              <div class="pane-grid">
+                <div class="pane-text">
+                  <h3>Tangible Physical Reach</h3>
+                  <p>We complement the velocity of the digital era with tangible physical prestige. We seamlessly coordinate with specialized distributors to deliver your niche formats, such as Vinyl and CD, securely into global boutique record stores.</p>
+                  <ul class="detail-list">
+                    <li>Premium Vinyl & CD Manufacturing Strategies</li>
+                    <li>Global Boutique Record Store Access</li>
+                    <li>Exclusive Format & Collector's Edition Planning</li>
+                  </ul>
+                </div>
+                <div class="pane-img"
+                  style="background-image: url('https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&q=80&w=1200');">
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="marketing">
+              <div class="pane-grid">
+                <div class="pane-text">
+                  <h3>Global Domain of Influence</h3>
+                  <p>Music fundamentally transcends borders. CMG formulates resounding local and major-scale strategies synchronized perfectly with international marketing coordinators stationed across Europe, North America, and Asia.</p>
+                  <ul class="detail-list">
+                    <li>Region-Focused Precision Marketing Campaigns</li>
+                    <li>Localized Editorial Playlist Endorsements</li>
+                    <li>Tour Programming & Dedicated Sponsorship Backing</li>
+                  </ul>
+                </div>
+                <div class="pane-img"
+                  style="background-image: url('https://images.unsplash.com/photo-1520193108119-242f21ad4457?auto=format&fit=crop&q=80&w=1200');">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Tech Section -->
+    <section id="tech" class="tech-zenith fade-in-up">
+      <div class="container tech-container">
+        <div class="tech-text">
+          <h2 class="section-heading">Empowering<br>Technology.</h2>
+          <p>The CMG ecosystem is architected deliberately for modern industry titans. Real-time streaming chronometrics, granular territorial analysis, and an unconditionally transparent royalty tracking framework, all unified within a single infrastructure.</p>
+          <a href="#apply" class="btn-text">Explore the Demo →</a>
+        </div>
+        <div class="tech-visual-simple">
+          <!-- Static high-quality UI showcase -->
+          <div class="ui-preview-card">
+            <div class="ui-header"><span>AUDIENCE ANALYTICS</span></div>
+            <div class="ui-body">
+              <div class="ui-bar" style="width: 80%;"></div>
+              <div class="ui-bar" style="width: 60%;"></div>
+              <div class="ui-bar" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DSP Grid with Labels -->
+    <section id="partners" class="network-zenith fade-in-up">
+      <div class="container">
+        <h4 class="network-label">STRATEGIC PLATFORM PARTNERS</h4>
+        <div class="dsp-grid-labeled">
+          <!-- Spotify -->
+          <div class="dsp-item" title="Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.503 17.303c-.218.358-.684.471-1.042.252-2.87-1.752-6.48-2.149-10.732-1.177-.411.094-.821-.161-.915-.572-.094-.411.161-.821.572-.915 4.654-1.066 8.643-.615 11.865 1.352.358.218.471.684.252 1.042zm1.468-3.26c-.274.446-.856.592-1.302.318-3.284-2.018-8.29-2.603-12.174-1.424-.503.153-1.034-.132-1.186-.635-.153-.503.132-1.034.635-1.186 4.434-1.346 9.948-.696 13.71 1.614.446.275.592.856.317 1.303zm.128-3.403c-3.937-2.338-10.434-2.553-14.218-1.404-.604.183-1.246-.167-1.429-.771-.183-.604.167-1.246.771-1.429 4.341-1.319 11.517-1.058 16.035 1.623.543.322.723 1.023.401 1.566-.322.543-1.023.723-1.56 0z" />
+            </svg>
+            <span>Spotify</span>
+          </div>
+          <!-- Apple Music -->
+          <div class="dsp-item" title="Apple Music">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path
+                d="M17.05 20.28c-.96.95-2.22 1.54-3.64 1.54-1.53 0-2.83-.69-3.91-1.54-1.08.85-2.38 1.54-3.91 1.54-1.42 0-2.68-.59-3.64-1.54C.99 19.32.4 18.06.4 16.64c0-2.91 2.37-5.27 5.28-5.27.65 0 1.27.12 1.83.33V2c0-.55.45-1 1-1h8c.55 0 1 .45 1 1v14.64c0 1.42-.59 2.68-1.54 3.64h.08zm-9.3 1.54c1.1 0 2.05-.44 2.82-1.05-.72-.62-1.47-1.23-2.19-1.85-.52-.45-1.11-.74-1.78-.74-1.31 0-2.38 1.07-2.38 2.38.01 1-.41 1.55-.41 1.55.93.47 1.83.71 2.94.71z" />
+            </svg>
+            <span>Apple Music</span>
+          </div>
+          <!-- YouTube -->
+          <div class="dsp-item" title="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+            <span>YouTube</span>
+          </div>
+          <!-- TikTok -->
+          <div class="dsp-item" title="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path
+                d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.03 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96a6.66 6.66 0 0 1 4.48-1.4c.09 2.23-.14 4.47-.9 6.57-.32.8-.8 1.55-1.44 2.18-.5.51-1.14.9-1.83 1.11-.53.16-1.08.2-1.64.12-1-.13-1.92-.79-2.39-1.7-.22-.44-.31-.93-.31-1.42 0-.3 0-.6.01-.89.03-.52.12-1.04.3-1.53.44-1.22 1.48-2.19 2.73-2.5 1.08-.28 2.22-.16 3.2.33.02-4.14-.01-8.28.02-12.41z" />
+            </svg>
+            <span>TikTok</span>
+          </div>
+          <!-- Deezer -->
+          <div class="dsp-item" title="Deezer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path
+                d="M1.34 16.148H4.99v2.548H1.34v-2.548zM5.617 16.148h3.65v2.548h-3.65v-2.548zM1.34 19.344H4.99v2.548H1.34v-2.548zM5.617 19.344h3.65v2.548h-3.65v-2.548zM1.34 12.952H4.99V15.5H1.34v-2.548zm4.277 0h3.65V15.5h-3.65v-2.548zM1.34 9.756H4.99v2.549H1.34V9.756zm4.277 0h3.65v2.549h-3.65V9.756zm4.354 12.136h3.65v-2.548h-3.65v2.548zm0-3.196h3.65v-2.548h-3.65v2.548zm0-3.197h3.65V13h-3.65v2.548zm0-3.196h3.65V9.804h-3.65v2.548zm0-3.196h3.65V6.608h-3.65v2.548zm4.354 12.736h3.65v-2.548h-3.65v2.548zm0-3.196h3.65v-2.548h-3.65v2.548zm0-3.197h3.65v-2.549h-3.65v2.549zm0-3.196h3.65V9.804h-3.65v2.548zm0-3.196h3.65V6.608h-3.65v2.548zm0-3.197h3.65V3.411h-3.65v2.548zm4.353 15.132h3.65v-2.548h-3.65v2.548zm0-3.196h3.65v-2.548h-3.65v2.548zm0-3.197h3.65V13h-3.65v2.548zm0-3.196h3.65V9.804h-3.65v2.548zM22.66 19.344h-3.65v2.548h3.65v-2.548zm0-3.196h-3.65v2.548h3.65v-2.548z" />
+            </svg>
+            <span>Deezer</span>
+          </div>
+          <!-- Amazon -->
+          <div class="dsp-item" title="Amazon Music">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path
+                d="M15.012 13.845c-.563-.18-1.246-.3-2.035-.357-.75-.054-1.517-.08-2.261-.08-1.636 0-3.23.111-4.606.31v1.6l1.352-.084c.883-.053 1.776-.113 2.65-.113 1.353 0 2.508.136 3.425.435.918.3 1.341.696 1.341 1.258 0 .58-.592 1.056-1.802 1.4-.874.254-1.898.376-2.923.376-.906 0-1.785-.084-2.618-.242-.8-.154-1.528-.396-2.147-.701l-.9.993c1.077.587 2.454.912 3.843 1.025.592.053 1.183.08 1.761.08 1.636 0 3.19-.245 4.505-.72s2.21-1.157 2.21-2.1c.012-.8-.432-1.5-1.896-1.98zM21.503 16.5c-3.52 1.5-7.1 2.25-10.74 2.25-1.92 0-3.8-.2-5.63-.585-.15-.03-.24-.135-.255-.255v-.75c0-.135.09-.225.225-.21a36.4 36.4 0 0 0 5.64.495c3.54 0 6.94-.72 10.33-2.16.135-.06.27-.045.39.045s.165.21.165.345v.525c0 .12-.06.24-.135.3zm.255-1.2c-.015.03-.03.045-.045.06l-.42.345c-.09.075-.21.09-.315.045-.03 0-.06-.015-.09-.03-2.31-1.305-5.01-1.935-7.725-2.04.165.195.315.39.42.615 0 .045.015.09.015.15s-.015.105-.06.135c-.06.06-.15.075-.24.03l-.42-.195-.42-.195c-3.15-.12-6.285.51-9.21 1.845-.09.045-.195.03-.27-.03s-.105-.15-.105-.24v-.525c0-.09.045-.18.135-.225 3.09-1.5 6.42-2.16 9.8-1.965.18.015.36.03.525.06.015-.495.09-1.02.21-1.56s.285-1.08.48-1.605c.03-.09.12-.15.225-.15h.69c.12 0 .21.075.255.195.06.18.12.36.165.54.06.18.09.375.135.555a16 16 0 0 1 .15 1.77c2.25.135 4.41.6 6.435 1.35.09.03.15.12.15.225v.75c-.01.07-.03.14-.07.21z" />
+            </svg>
+            <span>Amazon Music</span>
+          </div>
+          <!-- Instagram -->
+          <div class="dsp-item" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.412.56.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.359 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.413 2.227-.217.56-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.359-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.412-.56-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.359-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.249-1.805.412-2.227.217-.56.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.359 2.227-.413 1.266-.057 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.149.26-2.911.557-.788.306-1.457.715-2.122 1.38-.666.665-1.074 1.334-1.38 2.122-.297.762-.5 1.634-.557 2.911-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.277.26 2.149.557 2.911.306.788.715 1.457 1.38 2.122.665.666 1.334 1.074 2.122 1.38.762.297 1.634.5 2.911.557 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.057 2.149-.26 2.911-.557.788-.306 1.457-.715 2.122-1.38.665-.666 1.074-1.334 1.38-2.122.297-.762.5-1.634.557-2.911.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.277-.26-2.149-.557-2.911-.306-.788-.715-1.457-1.38-2.122-.665-.666-1.334-1.074-2.122-1.38-.762-.297-1.634-.5-2.911-.557-1.28-.058-1.688-.072-4.947-.072z" />
+              <path
+                d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+            <span>Instagram</span>
+          </div>
+          <!-- Tidal -->
+          <div class="dsp-item" title="Tidal">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 7.2L7.212 12l4.8 4.8 4.8-4.8-4.8-4.8zM4.8 12L0 16.8l4.8 4.8 4.8-4.8L4.8 12zm14.4 0l-4.8 4.8 4.8 4.8 4.8-4.8-4.8-4.8zM12.012 0L7.212 4.8l4.8 4.8 4.8-4.8-4.8-4.8z"/></svg>
+            <span>Tidal</span>
+          </div>
+          <!-- Beatport -->
+          <div class="dsp-item" title="Beatport">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 18.273a6.273 6.273 0 1 1 0-12.546 6.273 6.273 0 0 1 0 12.546z"/></svg>
+            <span>Beatport</span>
+          </div>
+          <!-- Pandora -->
+          <div class="dsp-item" title="Pandora">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.15 0a.72.72 0 0 0-.72.72v22.56c0 .4.32.72.72.72h10.45c3.5 0 6.64-1.87 8.16-4.66.5-.9 1.14-1.63 1.84-2.18.57-.45 1.15-.75 1.84-.75h.56v-4.03c-1.44-.06-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.03 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21Z"/></svg>
+            <span>Pandora</span>
+          </div>
+          <!-- Soundcloud -->
+          <div class="dsp-item" title="Soundcloud">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.53 10.36c-.4 0-.72.32-.72.72v7.65c0 .4.32.72.72.72s.72-.32.72-.72v-7.65c0-.4-.32-.72-.72-.72zm-3.6 0c-.4 0-.72.32-.72.72v7.65c0 .4.32.72.72.72s.72-.32.72-.72v-7.65c0-.4-.32-.72-.72-.72zm7.2 0c-.4 0-.72.32-.72.72v7.65c0 .4.32.72.72.72s.72-.32.72-.72v-7.65c0-.4-.32-.72-.72-.72zm-10.8 1.44c-.4 0-.72.32-.72.72v6.21c0 .4.32.72.72.72s.72-.32.72-.72v-6.21c0-.4-.32-.72-.72-.72zm14.4-2.16c-.4 0-.72.32-.72.72v8.37c0 .4.32.72.72.72s.72-.32.72-.72v-8.37c0-.4-.32-.72-.72-.72z"/></svg>
+            <span>Soundcloud</span>
+          </div>
+          <!-- Boomplay -->
+          <div class="dsp-item" title="Boomplay">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L2 12l10 12 10-12L12 0zm0 4.5L19.5 12 12 19.5 4.5 12 12 4.5z"/></svg>
+            <span>Boomplay</span>
+          </div>
+          <!-- Anghami -->
+          <div class="dsp-item" title="Anghami">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm0-20v16c-4.418 0-8-3.582-8-8s3.582-8 8-8z"/></svg>
+            <span>Anghami</span>
+          </div>
+          <!-- Napster -->
+          <div class="dsp-item" title="Napster">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 18.273c-3.464 0-6.273-2.809-6.273-6.273 0-3.464 2.809-6.273 6.273-6.273s6.273 2.809 6.273 6.273c0 3.464-2.809 6.273-6.273 6.273z"/></svg>
+            <span>Napster</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq-section" class="network-zenith fade-in-up">
+      <div class="container container-narrow" style="max-width:800px; margin: 0 auto;">
+        <h2 class="title-xl" style="font-size: clamp(32px, 6vw, 56px); margin-bottom: 48px;">Frequently Asked<br>Questions.</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">How does the 24-hour music distribution fundamentally operate? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>CMG's infrastructure possesses uncompromising direct API integration with digital publishing houses. The definitive millisecond your files are approved, they are pushed autonomously to the cluster, ensuring consumption readiness within precisely 24 hours. We conclusively eradicate archaic waiting periods.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do I forfeit any ownership of my music rights? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Never. You indisputably retain 100% of your artistic and master rights. CMG acts purely as a technological conduit and a superior management partner to help orchestrate your digital assets seamlessly.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is elite editorial support (PR) facilitated? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Yes. We do not stop at mere distribution. We engage in aggressive and direct pitching to the global editorial communication channels of giants like Spotify and Apple Music, systematically orchestrating high-tier playlist placements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Application -->
+    <section id="apply" class="apply-premium fade-in-up">
+      <div class="container apply-inner">
+        <div class="apply-header">
+          <h2 class="title-xl">Align with the<br>Elite.</h2>
+          <p>We exclusively partner with visionary projects that dictate culture. Disclose your strategy to our superior A&amp;R board for high-grade technical distribution considerations.</p>
+        </div>
+        <form class="cmg-form" id="applicationForm">
+          <div class="form-row">
+            <input type="text" id="artistName" placeholder="Artist / Label Name" disabled>
+            <input type="text" id="artistLocation" placeholder="Location (City, Country)" disabled>
+          </div>
+          <div class="form-row">
+            <input type="text" id="artistGenre" placeholder="Primary Genre / Vibe" disabled>
+            <input type="text" id="artistInstagram" placeholder="Instagram @handle" disabled>
+          </div>
+          <input type="email" id="artistEmail" placeholder="Contact Email Address" disabled>
+          <input type="url" id="artistLinks" placeholder="Music Links (Spotify, SoundCloud, etc.)" disabled>
+          <textarea id="artistMessage" rows="5" placeholder="Tell us about your project/vision..." disabled></textarea>
+          <button type="button" id="submitBtn" class="btn-locked" disabled>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 10px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            APPLICATIONS STRICTLY CLOSED
+          </button>
+          <div id="formStatus" class="form-status"></div>
+        </form>
+
+        <script>
+          document.getElementById('applicationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const status = document.getElementById('formStatus');
+
+            btn.disabled = true;
+            btn.innerText = 'Transmitting...';
+            status.innerText = '';
+
+            const formData = {
+              name: document.getElementById('artistName').value,
+              location: document.getElementById('artistLocation').value,
+              genre: document.getElementById('artistGenre').value,
+              instagram: document.getElementById('artistInstagram').value,
+              email: document.getElementById('artistEmail').value,
+              links: document.getElementById('artistLinks').value,
+              message: document.getElementById('artistMessage').value
+            };
+
+            try {
+              const response = await fetch('/api/apply', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+              });
+
+              if (!response.ok) {
+                if (response.status === 401) {
+                  throw new Error('Access Denied (401): Please disable "Deployment Protection" in Vercel settings.');
+                }
+                const errorText = await response.text();
+                throw new Error(`Server Error (${response.status}): ${errorText.substring(0, 50)}...`);
+              }
+
+              const result = await response.json();
+
+              if (result.success) {
+                window.location.href = 'thanks.html';
+              } else {
+                throw new Error(result.message || 'Submission failed');
+              }
+            } catch (error) {
+              btn.disabled = false;
+              btn.innerText = 'Submit Application';
+              status.innerText = error.message;
+              status.style.color = '#ff3b30';
+              console.error('Submission error:', error);
+            }
+          });
+        </script>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============================== -->
+  <!-- GLOBAL FOOTER                   -->
+  <!-- =============================== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-branding-group">
+          <div class="footer-brand">CMG<span>.</span></div>
+          <p class="footer-tagline">Independent Perspective in Music.</p>
+          <div class="footer-socials" style="margin-top: 10px;">
+            <a href="https://instagram.com/cmg.gl"
+              style="color: #fff; text-decoration: none; font-size: 14px; opacity: 0.8;">Instagram: @cmg.gl</a>
+          </div>
+          <a href="mailto:cozulemezmusicgroup@gmail.com" class="footer-email">cozulemezmusicgroup@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Cozulemez Music Group. ALL RIGHTS RESERVED.</p>
+        <div class="legal-links">
+          <a href="legal.html">LEGAL NOTICE</a>
+          <a href="privacy.html">PRIVACY POLICY</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Detail Modals -->
+  <div id="detailModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

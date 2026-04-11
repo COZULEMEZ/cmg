@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik & Veri Güvenliği | CMG</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .legal-content {
+            padding: 160px 0 80px 0;
+            min-height: 90vh;
+        }
+        .legal-container-wide {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .legal-content h1 {
+            font-size: clamp(40px, 6vw, 56px);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 40px;
+            line-height: 1.1;
+        }
+        .legal-content h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 60px;
+            margin-bottom: 24px;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+        }
+        .legal-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        .legal-content p, .legal-content li {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .highlight-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 60px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-loader" id="pageLoader"></div>
+    <div class="cursor-glow-container" id="cursorGlow"><div class="cursor-glow-inner"></div></div>
+    <div class="cursor-stealth" id="cursorStealth"></div>
+
+    <header id="header" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="container container-wide">
+            <nav style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
+                <div class="logo"><a href="/tr/" style="color:#fff; text-decoration:none; font-weight:800; font-size:24px; letter-spacing:-1px;">CMG<span style="color:var(--accent-blue);">.</span></a></div>
+                <div class="header-cta">
+                    <a href="/tr/" class="btn-minimal">← ANA SAYFAYA DÖN</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="legal-content">
+        <div class="legal-container-wide">
+            <div class="fade-in-up">
+                <h1>Gizlilik Politikası &<br><span class="gradient-text">Veri Güvenliği.</span></h1>
+
+                <p>Cozulemez Music Group (CMG) altyapısı, sanatçıların ve elit plak şirketlerinin hassas katalog verilerini uluslararası şifreleme ve gizlilik standartları altında güvenceye alır. Veri güvenliğimiz, endüstriyel standartların (ISO/IEC 27001) üzerinde konumlanmıştır.</p>
+
+                <section>
+                    <h2>1. Stratejik Veri Toplanması ve İşlenmesi</h2>
+                    <p>Sistemimize dahil olduğunuzda; resmi kimlik/kurum verileriniz, müzikal meta verileriniz (metadata) ve streaming (dinlenme) istatistikleriniz kapalı devre güvenli sunucularımıza kaydedilir. Bu veriler, yalnızca projenizin pazar payını analiz etmek ve telif ödemelerinizi milimetrik hassasiyetle hesaplamak için kullanılır.</p>
+                </section>
+
+                <section>
+                    <h2>2. Üçüncü Taraf İş Ortaklıkları (DSPs)</h2>
+                    <p>Eserlerinizin küresel dağıtımı amacıyla sağladığınız veriler, yalnızca onaylanmış ve doğrudan API bağlantımız bulunan Dijital Servis Sağlayıcıları (Apple Music, Spotify, YouTube Music, Tidal, vb.) ile paylaşılır. CMG, kullanıcı ve sanatçı verilerini siber güvenlik etik kuralları gereği <strong>asla</strong> üçüncü şahıs reklam veya veri analiz ajanslarına satmaz.</p>
+                </section>
+
+                <section>
+                    <h2>3. Finansal Veri Protokolü ve 256-Bit Şifreleme</h2>
+                    <p>Müzik hak ediş (Telif/Royalty) ödemeleriniz için toplanan banka ve kimlik verileri, bankacılık seviyesinde şifreleme (SSL/TLS 256-bit) metotlarıyla korunmaktadır. Sistem içi yetkilendirmeler dışında CMG personelinin bile finansal verilerinizin tamamına manuel erişimi bulunmamaktadır.</p>
+                    <div class="highlight-card">
+                        <h3 style="margin-top:0;">Gelişmiş Güvenlik Katmanları</h3>
+                        <p>Tüm finansal raporlar ve hassas sanatçı belgeleri "Zero-Knowledge" prensibi ile şifrelenir. Bu, şifre çözme anahtarının yalnızca yetkilendirilmiş uç noktalarda bulunduğu anlamına gelir.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>4. İçerik ve Kimlik Mahremiyeti (Vault Prensibi)</h2>
+                    <div class="highlight-card">
+                        <p style="margin-bottom:0;">CMG, onayınız olmadan henüz yayınlanmamış olan vizyon projelerinizi (Unreleased Demos), albüm kapaklarınızı ve PR kampanyalarınızı herhangi bir mecrada kullanmaz ve sızdırmazlık ilkesine kesin olarak uyar. Projeleriniz "Kilitli Kasa" (The Vault) prensibi ile AWS-KMS tabanlı ileri düzey anahtar yönetimi ile muhafaza edilir.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>5. Küresel Gizlilik Standartları (GDPR & CCPA)</h2>
+                    <p>CMG ekosistemi, Avrupa Birliği Genel Veri Koruma Yönetmeliği (GDPR) ve Kaliforniya Tüketici Gizliliği Yasası (CCPA) ile tam uyumlu çalışır. Sanatçılarımız, verilerinin taşınabilirliği ve silinmesi konusunda mutlak söz sahibidir.</p>
+                </section>
+
+                <a href="/tr/" class="back-btn">CMG Genel Ekosistemine Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 0; text-align: center;">
+        <p style="color: rgba(255,255,255,0.4); font-size: 14px; margin: 0;">© 2026 Cozulemez Music Group. TÜM HAKLARI SAKLIDIR.</p>
+    </footer>
+
+    <!-- Include main js for custom cursor -->
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
