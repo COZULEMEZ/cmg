@@ -157,10 +157,13 @@ window.addEventListener('load', () => {
 });
 
 // Custom Cursor Logic
-const cursorStealth = document.getElementById('cursorStealth');
-const cursorGlow = document.getElementById('cursorGlow');
+if (window.matchMedia('(any-pointer: coarse)').matches) {
+  // Completely disable custom cursor on touch devices
+} else {
+  const cursorStealth = document.getElementById('cursorStealth');
+  const cursorGlow = document.getElementById('cursorGlow');
 
-if (cursorStealth && cursorGlow) {
+  if (cursorStealth && cursorGlow) {
   let mouseX = window.innerWidth / 2;
   let mouseY = window.innerHeight / 2;
   let glowX = mouseX;
@@ -230,7 +233,6 @@ if (cursorStealth && cursorGlow) {
   });
 
   // Detection Tripwire & Global Deterrent
-  if (window.matchMedia('(any-pointer: coarse)').matches) return;
 
   let devtoolsOpen = false;
   const threshold = 160;
@@ -261,4 +263,6 @@ if (cursorStealth && cursorGlow) {
       alert("Print function restricted for protected assets.");
     }
   });
+    });
+  }
 }
