@@ -156,113 +156,54 @@ window.addEventListener('load', () => {
   }
 });
 
-// Custom Cursor Logic
-if (window.matchMedia('(any-pointer: coarse)').matches) {
-  // Completely disable custom cursor on touch devices
-} else {
-  const cursorStealth = document.getElementById('cursorStealth');
-  const cursorGlow = document.getElementById('cursorGlow');
+// =============================== 
+// SECURITY & CLOAKING LAYER 
+// (Deterrents for code inspection)
+// ===============================
 
-  if (cursorStealth && cursorGlow) {
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let glowX = mouseX;
-  let glowY = mouseY;
-  
-  const updateCursor = () => {
-    // Custom tip offset for the stealth arrowhead SVG
-    cursorStealth.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
-    
-    // Aura follows with smooth easing (lerp)
-    glowX += (mouseX - glowX) * 0.12;
-    glowY += (mouseY - glowY) * 0.12;
-    cursorGlow.style.transform = `translate(${glowX}px, ${glowY}px)`;
-    
-    requestAnimationFrame(updateCursor);
-  };
-  requestAnimationFrame(updateCursor);
+// Disable Right Click
+document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  // Adding hover state for interactive elements
-  const interactables = document.querySelectorAll('a, button, input, textarea, .faq-question, .dsp-item, .tech-visual-simple');
-  interactables.forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
-    el.addEventListener('mouseleave', () => {
-      document.body.classList.remove('hovering');
-      // Reset magnetic effect
-      if (el.classList.contains('magnetic')) {
-        el.style.transform = '';
-      }
-    });
-
-    // Magnetic effect for buttons
-    if (el.classList.contains('btn-primary') || el.classList.contains('btn-secondary') || el.classList.contains('btn-minimal')) {
-      el.classList.add('magnetic');
-      el.addEventListener('mousemove', (e) => {
-        const rect = el.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        el.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-      });
-    }
-  });
-
-  // =============================== 
-  // SECURITY & CLOAKING LAYER 
-  // (Deterrents for code inspection)
-  // ===============================
-  
-  // Disable Right Click
-  document.addEventListener('contextmenu', (e) => e.preventDefault());
-
-  // Disable specific key combos for DevTools
-  document.addEventListener('keydown', (e) => {
-    // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-    if (
-      e.keyCode === 123 || 
-      (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
-      (e.ctrlKey && e.keyCode === 85)
-    ) {
-      e.preventDefault();
-      return false;
-    }
-  });
-
-  // Detection Tripwire & Global Deterrent
-
-  let devtoolsOpen = false;
-  const threshold = 160;
-
-  const securityProtocol = () => {
-    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-    
-    if (widthThreshold || heightThreshold) {
-      if (!devtoolsOpen) {
-        console.clear();
-        console.log("%cAUTH_REQUIRED", "color: #ff3b30; font-size: 50px; font-weight: bold;");
-        console.log("%cUnauthorized internal access detected. Asset projection secured.", "color: #fff; font-size: 16px;");
-      }
-      devtoolsOpen = true;
-      (function() { (function a() { try { (function b(i) { if (('' + (i / i)).length !== 1 || i % 20 === 0) { (function() {}).constructor('debugger')(); } else { debugger; } b(++i); })(0); } catch (e) { setTimeout(a, 5000); } })() })();
-    } else {
-      devtoolsOpen = false;
-    }
-  };
-
-  setInterval(securityProtocol, 1000);
-  
-  // Anti-Print
-  document.addEventListener('keydown', (e) => {
-    if (e.ctrlKey && e.keyCode === 80) { // Ctrl+P
-      e.preventDefault();
-      alert("Print function restricted for protected assets.");
-    }
-  });
-    });
+// Disable specific key combos for DevTools
+document.addEventListener('keydown', (e) => {
+  // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+  if (
+    e.keyCode === 123 || 
+    (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+    (e.ctrlKey && e.keyCode === 85)
+  ) {
+    e.preventDefault();
+    return false;
   }
-}
+});
+
+// Detection Tripwire & Global Deterrent
+let devtoolsOpen = false;
+const threshold = 160;
+
+const securityProtocol = () => {
+  const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+  const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+  
+  if (widthThreshold || heightThreshold) {
+    if (!devtoolsOpen) {
+      console.clear();
+      console.log("%cAUTH_REQUIRED", "color: #ff3b30; font-size: 50px; font-weight: bold;");
+      console.log("%cUnauthorized internal access detected. Asset projection secured.", "color: #fff; font-size: 16px;");
+    }
+    devtoolsOpen = true;
+    (function() { (function a() { try { (function b(i) { if (('' + (i / i)).length !== 1 || i % 20 === 0) { (function() {}).constructor('debugger')(); } else { debugger; } b(++i); })(0); } catch (e) { setTimeout(a, 5000); } })() })();
+  } else {
+    devtoolsOpen = false;
+  }
+};
+
+setInterval(securityProtocol, 1000);
+
+// Anti-Print
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && e.keyCode === 80) { // Ctrl+P
+    e.preventDefault();
+    alert("Print function restricted for protected assets.");
+  }
+});

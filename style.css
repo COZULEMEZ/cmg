@@ -891,71 +891,100 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   opacity: 0.04;
 }
+/* ================================================= */
+/* RESPONSIVE REFINEMENTS: MOBILE, TABLET & PC       */
+/* ================================================= */
 
-/* Hide default cursor only on devices with a mouse */
-@media (any-pointer: fine) {
-  body { cursor: none; }
-  a, button, input, textarea, .faq-question, .dsp-item { cursor: none !important; }
+/* Global Smooth Scaling */
+body {
+  cursor: auto !important;
 }
 
-/* Custom Stealth Metallic Cursor & RGB Aura */
-.cursor-stealth {
-  position: fixed;
-  top: 0; left: 0;
-  width: 32px; height: 32px;
-  pointer-events: none;
-  z-index: 10001; /* Above the aura */
-  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 4 L11 26 L15 17 L24 13 Z' fill='rgba(255,255,255,0.03)' stroke='url(%23metal)' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M5.5 5.5 L11 23.5 L14.5 16 L22 12.5 Z' fill='rgba(255,255,255,0.1)' stroke='url(%23metal2)' stroke-width='0.5'/%3E%3Cdefs%3E%3ClinearGradient id='metal' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff'/%3E%3Cstop offset='50%25' stop-color='%23aaaaaa'/%3E%3Cstop offset='100%25' stop-color='%23444444'/%3E%3C/linearGradient%3E%3ClinearGradient id='metal2' x1='100%25' y1='100%25' x2='0%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='0.8'/%3E%3Cstop offset='100%25' stop-color='%23000000' stop-opacity='0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
-  background-size: cover;
-  filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
-  transform-origin: 4px 4px; /* Tip of the arrow */
+/* 1. Mobile & Small Screen Optimization (Up to 768px) */
+@media (max-width: 768px) {
+  .hero-zenith {
+    height: auto;
+    padding: 120px 0 80px;
+  }
+  
+  .hero-main-title {
+    font-size: clamp(38px, 12vw, 52px);
+    line-height: 1.1;
+  }
+  
+  .hero-description {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-hero-primary, .btn-hero-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .detail-card {
+    padding: 30px 24px;
+    border-radius: 20px;
+  }
+
+  .section-heading {
+    font-size: 36px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .legal-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
-/* The fluid RGB Aura */
-.cursor-glow-container {
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 10000;
+/* 2. Tablet Optimization (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .zenith-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero-main-title {
+    font-size: 72px;
+  }
+
+  .pane-text {
+    padding: 40px;
+  }
 }
 
-.cursor-glow-inner {
-  width: 140px; height: 140px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%); /* Centered exactly on the container tracking point */
-  background: radial-gradient(circle, rgba(51, 153, 255, 0.4) 0%, rgba(200, 50, 255, 0.15) 35%, rgba(0, 0, 0, 0) 70%);
-  filter: blur(15px);
-  animation: aura-pulse 3s infinite alternate linear;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+/* 3. PC / Ultra-Wide Excellence (1440px+) */
+@media (min-width: 1440px) {
+  .container-wide {
+    max-width: 1400px;
+  }
+  
+  .hero-main-title {
+    font-size: 100px;
+  }
 }
 
-/* Solid Premium Interactive State */
-body.hovering .cursor-glow-inner {
-  width: 180px; height: 180px;
-  background: radial-gradient(circle, rgba(255, 51, 102, 0.4) 0%, rgba(200, 50, 255, 0.25) 45%, rgba(0, 0, 0, 0) 70%);
-  filter: blur(20px);
-}
-
-@keyframes aura-pulse {
-  0% { transform: translate(-50%, -50%) scale(0.9) rotate(0deg); filter: blur(12px) hue-rotate(0deg); opacity: 0.7; }
-  100% { transform: translate(-50%, -50%) scale(1.1) rotate(10deg); filter: blur(20px) hue-rotate(25deg); opacity: 1; }
-}
-
-/* Page Initialization Fade */
+/* Page Initialization Fade (Kept for cinematic feel) */
 .page-loader {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-color);
   z-index: 100000;
   pointer-events: none;
   opacity: 1;
-  transition: opacity 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s ease;
 }
 .page-loader.loaded { opacity: 0; }
-
-/* Desktop-only elements deterrent */
-@media (any-pointer: coarse) {
-  .cursor-stealth, .cursor-glow-container {
-    display: none !important;
-  }
 }
