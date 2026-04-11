@@ -207,3 +207,22 @@ document.addEventListener('keydown', (e) => {
     alert("Print function restricted for protected assets.");
   }
 });
+
+// Mobile Menu Toggle Logic
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+  });
+
+  // Auto-close menu on link click
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    });
+  });
+}

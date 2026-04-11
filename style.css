@@ -902,6 +902,72 @@ body {
 
 /* 1. Mobile & Small Screen Optimization (Up to 768px) */
 @media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(25px);
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    z-index: 2000;
+    transition: right 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2101;
+    padding: 10px;
+  }
+
+  .mobile-menu-btn .bar {
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+  body.menu-open .mobile-menu-btn .bar:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  body.menu-open .mobile-menu-btn .bar:nth-child(2) {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .cmg-form {
+    gap: 15px;
+    margin-top: 40px;
+  }
+  
+  .hide-mobile {
+    display: none !important;
+  }
+
   .hero-zenith {
     height: auto;
     padding: 120px 0 80px;
