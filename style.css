@@ -164,6 +164,9 @@ nav {
   letter-spacing: -0.04em;
   margin-bottom: 28px;
   color: #fff;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .gradient-text {
@@ -186,6 +189,7 @@ nav {
   line-height: 1.15;
   max-width: 700px;
   margin: 0 auto 48px;
+  overflow-wrap: break-word;
 }
 
 .hero-cta-group {
