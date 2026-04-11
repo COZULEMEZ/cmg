@@ -1,13 +1,10 @@
 {
-    "version": 2,
-    "rewrites": [
-        {
-            "source": "/api/apply",
-            "destination": "/api/apply.js"
-        },
-        {
-            "source": "/((?!api/).*)",
-            "destination": "/$1"
-        }
-    ]
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/apply",
+      "destination": "/api/apply.js"
+    }
+  ]
 }
