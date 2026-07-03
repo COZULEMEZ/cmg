@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import './LiquidNavbar.css';
+import './Navbar.css';
 
-const LiquidNavbar = () => {
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -63,4 +63,4 @@ const LiquidNavbar = () => {
   );
 };
 
-export default LiquidNavbar;
+export default Navbar;

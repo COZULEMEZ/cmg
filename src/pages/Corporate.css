@@ -5,6 +5,22 @@
   min-height: 80vh;
 }
 
+.corporate-container {
+  padding-top: 100px; /* navbar spacing */
+  padding-bottom: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.corporate-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  width: min(1100px, 100%);
+  padding: clamp(16px, 4vw, 48px);
+}
+
 .corporate-hero {
   text-align: center;
   margin-bottom: 5rem;

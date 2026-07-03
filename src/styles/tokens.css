@@ -1,0 +1,33 @@
+:root {
+  /* Colors (Extracted from existing index.css) */
+  --bg-primary: #050505;
+  --bg-secondary: #080808;
+  --bg-alt: #0d0d0d;
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(20, 20, 25, 0.35);
+
+  /* Spacing Tokens */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Border Radius */
+  --radius: 16px;
+
+  /* Fluid Typography */
+  --text-sm: clamp(12px, 2vw, 14px);
+  --text-md: clamp(14px, 2.5vw, 16px);
+  --text-lg: clamp(18px, 3vw, 22px);
+  --text-xl: clamp(24px, 5vw, 40px);
+  --text-xxl: clamp(32px, 6vw, 64px);
+
+  /* Animation */
+  --anim-hover-time: 400ms;
+}
