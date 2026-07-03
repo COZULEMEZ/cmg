@@ -218,10 +218,20 @@
 }
 
 @media (max-width: 480px) {
+  .liquid-navbar-wrapper {
+    padding-top: 0.5rem;
+  }
+  .liquid-navbar-wrapper.scrolled {
+    padding-top: 0;
+  }
   .liquid-navbar {
-    width: 100%;
-    max-width: calc(100% - 2rem);
-    padding: 0 1rem;
+    width: calc(100% - 24px);
+    height: 60px;
+    padding: 0 1.2rem;
+    border-radius: 20px;
+  }
+  .navbar-logo {
+    font-size: 1.1rem;
   }
   .navbar-register {
     width: 100%;
