@@ -1,0 +1,150 @@
+.liquid-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.liquid-label {
+  color: #bbb;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 0.2rem;
+}
+
+.liquid-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.liquid-input-icon {
+  position: absolute;
+  left: 1rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liquid-input {
+  width: 100%;
+  background: rgba(20, 20, 25, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.liquid-input.with-icon {
+  padding-left: 3rem;
+}
+
+.liquid-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.liquid-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+.liquid-input-wrapper.has-error .liquid-input {
+  border-color: rgba(255, 50, 50, 0.5);
+}
+
+.liquid-input-wrapper.has-error .liquid-input:focus {
+  box-shadow: 0 0 0 4px rgba(255, 50, 50, 0.1);
+}
+
+.liquid-error-msg {
+  color: #ff5555;
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+}
+
+/* Custom Select Dropdown Styles */
+.liquid-select-trigger {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.liquid-select-trigger .placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.liquid-select-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  color: #888;
+}
+
+.liquid-select-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: rgba(20, 20, 25, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: dropdownFadeIn 0.2s ease;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.liquid-select-option {
+  padding: 1rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.liquid-select-option:last-child {
+  border-bottom: none;
+}
+
+.liquid-select-option:hover, .liquid-select-option.selected {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* Scrollbar for Dropdown */
+.liquid-select-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.liquid-select-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+.liquid-select-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+.liquid-select-dropdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

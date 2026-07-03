@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+:root {
+  --bg-primary: #050505;
+  --bg-secondary: #080808;
+  --bg-alt: #0d0d0d;
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(20, 20, 25, 0.35);
+  --anim-hover-time: 400ms;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100vw;
+  /* Prevent font scaling issues on mobile rotation */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* Prevents text thinning/thickening anomalies on Mac/iOS */
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Cinematic depth layer */
+  background: 
+    radial-gradient(ellipse at 50% -20%, #1a1a24 0%, var(--bg-primary) 60%),
+    radial-gradient(circle at 100% 100%, var(--bg-alt) 0%, var(--bg-primary) 50%);
+  background-attachment: fixed;
+  overscroll-behavior-y: none; /* Prevent rubber-banding on mobile browsers */
+}

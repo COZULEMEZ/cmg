@@ -1,0 +1,118 @@
+/* ============================================
+   PARTNERS MARQUEE — Liquid Glass Dual-Row
+   ============================================ */
+
+.partners-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Row 1 — scroll left */
+.marquee-content {
+  display: inline-flex;
+  gap: 1.25rem;
+  animation: marquee-left 35s linear infinite;
+  padding-left: 1.25rem;
+  will-change: transform;
+}
+
+/* Row 2 — scroll right */
+.marquee-content.marquee-reverse {
+  animation: marquee-right 40s linear infinite;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-50% - 0.625rem)); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(calc(-50% - 0.625rem)); }
+  to   { transform: translateX(0); }
+}
+
+/* Pause on hover */
+.partners-marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Individual partner pill */
+.partner-logo-glass {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 0.75rem 2rem;
+  border-radius: 999vw;
+  cursor: default;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.06);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle brand color glow on hover */
+.partner-logo-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999vw;
+  background: radial-gradient(circle at 30% 50%, var(--brand-color, #fff), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.partner-logo-glass:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255,255,255,0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.12);
+}
+
+.partner-logo-glass:hover::before {
+  opacity: 0.08;
+}
+
+.partner-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 6px currentColor);
+  transition: filter 0.3s ease;
+}
+
+.partner-logo-glass:hover .partner-icon {
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.partner-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #a1a1aa;
+  letter-spacing: 0.01em;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.partner-logo-glass:hover .partner-name {
+  color: #ffffff;
+}

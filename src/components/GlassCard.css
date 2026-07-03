@@ -1,0 +1,57 @@
+.glass-card {
+  background: rgba(15, 15, 20, 0.4);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px; /* Apple-style squircle approx */
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 1px 0 2px rgba(255, 255, 255, 0.05),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.8);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Crystal Edge Highlight */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  pointer-events: none;
+}
+
+/* Inner depth layer for crystal effect */
+.glass-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.05) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(0,0,0,0.5) 100%
+  );
+  pointer-events: none;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 35px 70px rgba(0, 0, 0, 0.8),
+    inset 0 1px 2px rgba(255, 255, 255, 0.25),
+    inset 1px 0 2px rgba(255, 255, 255, 0.1),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.glass-card-pad-default { padding: 2.5rem; }
+.glass-card-pad-sm { padding: 1.5rem; }
+.glass-card-pad-lg { padding: 3.5rem; }
+.glass-card-pad-none { padding: 0; }
