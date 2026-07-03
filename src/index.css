@@ -28,7 +28,7 @@ body {
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; /* Prevents text thinning/thickening anomalies on Mac/iOS */
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
   /* Cinematic depth layer */
   background: 

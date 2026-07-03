@@ -142,8 +142,8 @@
 /* Fullscreen Video Section */
 .fullscreen-video-section {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100dvh;
   margin-left: calc(-50vw + 50%); /* container'dan tam taşma garantisi */
   overflow: hidden;
   background: #000;
@@ -155,9 +155,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;
+  width: 100%;
   height: 56.25vw; /* 16:9 Aspect Ratio */
-  min-height: 100vh;
+  min-height: 100dvh;
   min-width: 177.77vh; /* 16:9 */
   pointer-events: none; /* Disable interaction to hide YT UI */
 }
