@@ -9,35 +9,12 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
 };
 
-let hasSeenSplash = false;
-
 const Hero = ({ settings }) => {
-  const [showSplash, setShowSplash] = useState(!hasSeenSplash);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const handleEnterSite = () => {
-    hasSeenSplash = true;
-    setShowSplash(false);
-  };
-
-  if (showSplash) {
-    return (
-      <div className="splash-screen" onClick={handleEnterSite}>
-        <div className="splash-glow"></div>
-        <div className="splash-content">
-          <p className="splash-pre">EST. 2025</p>
-          <h1 className="splash-logo">CMG</h1>
-          <p className="splash-sub">Cozulemez Music Group</p>
-          <div className="splash-line"></div>
-          <p className="splash-action">Giriş İçin Tıklayın</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <section className="section" style={{ minHeight: '90svh' }}>
