@@ -182,7 +182,7 @@ const Home = () => {
     <div className="home-page">
 
       {/* Fullscreen Video Intro Section */}
-      <section id="video" className="fullscreen-video-section">
+      <section className="fullscreen-video-section">
         <div className={`video-preloader ${isVideoLoaded ? 'fade-out' : ''}`}>
           <div className="cmg-loader"></div>
         </div>
@@ -231,11 +231,11 @@ const Home = () => {
             {settings.home_subtitle || 'Spotify, Apple Music ve 150+ platformda profesyonel müzik dağıtımı. Etiket yönetimi, telif koruması ve gelir analizi tek çatı altında.'}
           </motion.p>
           <motion.div className="hero-actions" variants={fadeUp}>
-            <a href="#features" className="liquid-btn-wrap">
+            <Link to="/basvuru" className="liquid-btn-wrap">
               <div className="liquid-btn">
                 <span>Hemen Başlayın &rarr;</span>
               </div>
-            </a>
+            </Link>
             <a href="#features" className="liquid-btn-secondary">
               <Play size={16} />
               <span>Sistem Nasıl Çalışır?</span>
@@ -329,7 +329,7 @@ const Home = () => {
       </section>
 
       {/* Distribution Network — replaces testimonials */}
-      <section id="network" className="network-section">
+      <section className="network-section">
         <motion.div 
           className="section-header"
           initial="hidden"
@@ -400,14 +400,14 @@ const Home = () => {
           <h2 className="cta-title">{settings.home_cta_title || 'Kariyerinizi Ölçeklendirin'}</h2>
           <p className="cta-sub">{settings.home_cta_sub || 'Profesyonel dağıtım ağına katılın. Başvurunuzu yapın ve eserlerinizi global standartlarda yönetmeye başlayın.'}</p>
           <div className="cta-actions">
-            <a href={`mailto:${settings.contact_email || 'cozulemezmusicgroup@gmail.com'}`} className="liquid-btn-wrap">
+            <Link to="/basvuru" className="liquid-btn-wrap">
               <div className="liquid-btn">
                 <span>Sanatçı Başvurusu Yapın</span>
               </div>
-            </a>
-            <a href={`mailto:${settings.contact_email || 'cozulemezmusicgroup@gmail.com'}`} className="cta-link">
+            </Link>
+            <Link to="/iletisim" className="cta-link">
               Bizimle İletişime Geçin <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
         </GlassCard>
       </motion.section>
