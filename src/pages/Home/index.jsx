@@ -400,12 +400,12 @@ const Home = () => {
           <h2 className="cta-title">{settings.home_cta_title || 'Kariyerinizi Ölçeklendirin'}</h2>
           <p className="cta-sub">{settings.home_cta_sub || 'Profesyonel dağıtım ağına katılın. Başvurunuzu yapın ve eserlerinizi global standartlarda yönetmeye başlayın.'}</p>
           <div className="cta-actions">
-            <a href={`mailto:${settings.contact_email || 'info@cozulemezmusicgroup.com'}`} className="liquid-btn-wrap">
+            <a href={`mailto:${settings.contact_email || 'cozulemezmusicgroup@gmail.com'}`} className="liquid-btn-wrap">
               <div className="liquid-btn">
                 <span>Sanatçı Başvurusu Yapın</span>
               </div>
             </a>
-            <a href={`mailto:${settings.contact_email || 'info@cozulemezmusicgroup.com'}`} className="cta-link">
+            <a href={`mailto:${settings.contact_email || 'cozulemezmusicgroup@gmail.com'}`} className="cta-link">
               Bizimle İletişime Geçin <ArrowRight size={14} />
             </a>
           </div>
