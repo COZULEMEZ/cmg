@@ -24,19 +24,16 @@ const LiquidNavbar = () => {
 
         {/* Desktop Links */}
         <div className="navbar-links">
-          <Link to="/">Ana Sayfa</Link>
-          <Link to="/hakkimizda">Hakkımızda</Link>
-          <Link to="/hizmetler">Hizmetler</Link>
-          <Link to="/basvuru">Başvuru</Link>
-          <Link to="/iletisim">İletişim</Link>
+          <a href="#video">Ana Sayfa</a>
+          <a href="#features">Sistem</a>
+          <a href="#network">Ağımız</a>
         </div>
 
         {/* Actions */}
         <div className="navbar-actions">
-
-          <Link to="/basvuru" className="navbar-register">
-            Başvuru Yap
-          </Link>
+          <a href="#features" className="navbar-register">
+            Detaylar
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -48,15 +45,13 @@ const LiquidNavbar = () => {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="glass-pill mobile-menu">
-          <Link to="/" onClick={() => setMobileOpen(false)}>Ana Sayfa</Link>
-          <Link to="/hakkimizda" onClick={() => setMobileOpen(false)}>Hakkımızda</Link>
-          <Link to="/hizmetler" onClick={() => setMobileOpen(false)}>Hizmetler</Link>
-          <Link to="/basvuru" onClick={() => setMobileOpen(false)}>Başvuru</Link>
-          <Link to="/iletisim" onClick={() => setMobileOpen(false)}>İletişim</Link>
+          <a href="#video" onClick={() => setMobileOpen(false)}>Ana Sayfa</a>
+          <a href="#features" onClick={() => setMobileOpen(false)}>Sistem Nasıl Çalışır?</a>
+          <a href="#network" onClick={() => setMobileOpen(false)}>Küresel Ağımız</a>
           <hr className="mobile-divider" />
-          <Link to="/basvuru" className="navbar-register" onClick={() => setMobileOpen(false)}>
-            Başvuru Yap
-          </Link>
+          <a href="#features" className="navbar-register" onClick={() => setMobileOpen(false)}>
+            Detaylı İncele
+          </a>
         </div>
       )}
     </nav>

@@ -182,7 +182,7 @@ const Home = () => {
     <div className="home-page">
 
       {/* Fullscreen Video Intro Section */}
-      <section className="fullscreen-video-section">
+      <section id="video" className="fullscreen-video-section">
         <div className={`video-preloader ${isVideoLoaded ? 'fade-out' : ''}`}>
           <div className="cmg-loader"></div>
         </div>
@@ -329,7 +329,7 @@ const Home = () => {
       </section>
 
       {/* Distribution Network — replaces testimonials */}
-      <section className="network-section">
+      <section id="network" className="network-section">
         <motion.div 
           className="section-header"
           initial="hidden"
