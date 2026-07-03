@@ -76,81 +76,9 @@ const Home = () => {
   const { settings } = useSettings();
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [showSplash, setShowSplash] = useState(!hasSeenSplash);
-  
-  // Audio handling — preload into memory for instant playback
-  const audioRef = useRef(null);
-
-  // Force preload on mount
-  useEffect(() => {
-    const audio = new Audio('/toxic-slowed.mp3');
-    audio.preload = 'auto';
-    audio.loop = true;
-    audio.volume = 0.65;
-    audioRef.current = audio;
-    audio.load();
-
-    // If returning from another page (splash already seen), auto-play immediately
-    if (hasSeenSplash) {
-      audio.currentTime = 0;
-      audio.play().catch(() => {});
-    }
-
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        audio.pause();
-      } else {
-        // Only resume if splash screen has been passed
-        if (hasSeenSplash) {
-          audio.play().catch(() => {});
-        }
-      }
-    };
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      audio.pause();
-      audio.src = '';
-    };
-  }, []);
-
-  // Scroll-based volume fade
-  useEffect(() => {
-    if (showSplash) return;
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const maxScroll = window.innerHeight;
-      
-      let newVolume = 0.65;
-      if (scrollY <= 0) {
-        newVolume = 0.65;
-      } else if (scrollY >= maxScroll) {
-        newVolume = 0;
-      } else {
-        const ratio = 1 - (scrollY / maxScroll);
-        newVolume = Number((0.65 * ratio).toFixed(2));
-      }
-
-      if (audioRef.current) {
-        audioRef.current.volume = newVolume;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [showSplash]);
-
   // Splash screen click handler
   const handleEnterSite = () => {
     hasSeenSplash = true;
-    const audio = audioRef.current;
-    if (audio) {
-      audio.currentTime = 0;
-      audio.play().catch(() => {});
-    }
     setShowSplash(false);
   };
 

@@ -204,7 +204,6 @@
   padding: 0;
   line-height: 1;
   letter-spacing: 0.05em;
-  mix-blend-mode: difference; /* Inverts the colors of the video behind it */
   color: #fff;
   animation: cakarBlip 1s infinite;
 }

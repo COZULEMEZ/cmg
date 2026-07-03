@@ -34,5 +34,4 @@ body {
   background: 
     radial-gradient(ellipse at 50% -20%, #1a1a24 0%, var(--bg-primary) 60%),
     radial-gradient(circle at 100% 100%, var(--bg-alt) 0%, var(--bg-primary) 50%);
-  background-attachment: fixed;
 }
