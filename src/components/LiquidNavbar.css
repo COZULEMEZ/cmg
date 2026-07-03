@@ -169,8 +169,9 @@
 
 .mobile-menu {
   margin-top: 0.75rem;
-  width: 100%;
-  max-width: calc(100vw - 2rem);
+  width: 92%;
+  max-width: 380px;
+  align-self: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -178,7 +179,7 @@
   padding: 1.5rem;
   border-radius: 24px !important;
   background: rgba(15, 15, 20, 0.8);
-  backdrop-filter: blur(40px) saturate(200%);
+  backdrop-filter: blur(20px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
