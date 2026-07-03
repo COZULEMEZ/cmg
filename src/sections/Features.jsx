@@ -1,5 +1,6 @@
 import React from 'react';
 import { Globe, TrendingUp, Shield, Users, Zap, BarChart3 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import GlassCard from '../components/GlassCard';
 
 const features = [
@@ -35,30 +36,54 @@ const features = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+};
+
 const Features = ({ settings }) => {
   return (
     <section id="features" className="section" style={{ padding: '6rem 0' }}>
       <div className="section-inner">
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+        <motion.div 
+          style={{ textAlign: 'center', marginBottom: '4rem' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
           <h2 style={{ fontSize: 'var(--text-xl)', marginBottom: '1rem' }}>
             {settings?.home_features_title || 'Merkezi Yönetim Altyapısı'}
           </h2>
           <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
             {settings?.home_features_sub || 'Profesyonel müzisyenler ve plak şirketleri için tasarlanmış uçtan uca dijital dağıtım.'}
           </p>
-        </div>
+        </motion.div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+        <motion.div 
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+        >
           {features.map((f, i) => (
-            <GlassCard key={i} style={{ padding: '2rem' }}>
-              <div style={{ color: '#fff', marginBottom: '1rem', background: 'rgba(255,255,255,0.05)', display: 'inline-flex', padding: '1rem', borderRadius: '16px' }}>
-                {f.icon}
-              </div>
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>{f.title}</h3>
-              <p style={{ color: '#888', lineHeight: 1.6 }}>{f.desc}</p>
-            </GlassCard>
+            <motion.div key={i} variants={cardVariants}>
+              <GlassCard style={{ padding: '2rem' }}>
+                <div style={{ color: '#fff', marginBottom: '1rem', background: 'rgba(255,255,255,0.05)', display: 'inline-flex', padding: '1rem', borderRadius: '16px' }}>
+                  {f.icon}
+                </div>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>{f.title}</h3>
+                <p style={{ color: '#888', lineHeight: 1.6 }}>{f.desc}</p>
+              </GlassCard>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

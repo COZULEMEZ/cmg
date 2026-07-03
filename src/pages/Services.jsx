@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import GlassCard from '../components/GlassCard';
 import {
   Globe, Shield, TrendingUp, Users, Mic2, PieChart, Volume2,
@@ -121,32 +122,61 @@ const ServiceCard = ({ service, settings }) => {
   );
 };
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+};
+
 const Services = () => {
   const { settings } = useSettings();
 
   return (
-    <div className="corporate-page">
-      <section className="corporate-hero">
-        <h1 className="corporate-title">Hizmetlerimiz</h1>
-        <p className="corporate-subtitle">
-          Müzik kariyerinizi ve plak şirketinizi büyütmek için ihtiyacınız olan tüm profesyonel araçlar tek bir ekosistemde.
-        </p>
+    <div className="page" style={{ paddingTop: '100px' }}>
+      <section className="section">
+        <motion.div 
+          className="section-inner" 
+          style={{ textAlign: 'center', paddingBottom: '2rem' }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1rem', letterSpacing: '-0.03em' }}>Hizmetlerimiz</h1>
+          <p style={{ color: '#888', maxWidth: '600px', margin: '0 auto' }}>
+            Müzik kariyerinizi ve plak şirketinizi büyütmek için ihtiyacınız olan tüm profesyonel araçlar tek bir ekosistemde.
+          </p>
+        </motion.div>
       </section>
 
-      <section className="corporate-content">
-        {serviceCategories.map((cat, ci) => (
-          <div key={ci}>
-            <div className="service-category-header">
-              <div className="service-category-icon">{cat.icon}</div>
-              <h2>{cat.category}</h2>
-            </div>
-            <div className="corporate-grid-2">
-              {cat.services.map((service, si) => (
-                <ServiceCard key={si} service={service} settings={settings} />
-              ))}
-            </div>
-          </div>
-        ))}
+      <section className="section">
+        <div className="section-inner" style={{ paddingTop: 0 }}>
+          {serviceCategories.map((cat, ci) => (
+            <motion.div 
+              key={ci} 
+              style={{ marginBottom: '4rem' }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-50px' }}
+              variants={containerVariants}
+            >
+              <motion.div variants={cardVariants} className="service-category-header" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
+                <div style={{ color: '#fff', background: 'rgba(255,255,255,0.05)', padding: '0.75rem', borderRadius: '12px' }}>{cat.icon}</div>
+                <h2 style={{ fontSize: '1.5rem', margin: 0 }}>{cat.category}</h2>
+              </motion.div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                {cat.services.map((service, si) => (
+                  <motion.div key={si} variants={cardVariants}>
+                    <ServiceCard service={service} settings={settings} />
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </section>
     </div>
   );
