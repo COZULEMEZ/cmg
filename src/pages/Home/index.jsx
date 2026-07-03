@@ -116,11 +116,12 @@ const Home = () => {
         </div>
         <div className="fullscreen-video-wrapper">
           <iframe 
-            src="https://www.youtube-nocookie.com/embed/6YMY24KoHT4?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3&loading=eager" 
+            src="https://www.youtube-nocookie.com/embed/6YMY24KoHT4?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3" 
             title="CMG Tanıtım" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen
+            loading="lazy"
             className="fullscreen-iframe"
           ></iframe>
         </div>
