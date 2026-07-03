@@ -95,7 +95,20 @@ const Home = () => {
       audio.play().catch(() => {});
     }
 
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        audio.pause();
+      } else {
+        // Only resume if splash screen has been passed
+        if (hasSeenSplash) {
+          audio.play().catch(() => {});
+        }
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       audio.pause();
       audio.src = '';
     };

@@ -16,8 +16,6 @@
 }
 
 html {
-  overflow-x: hidden;
-  width: 100vw;
   /* Prevent font scaling issues on mobile rotation */
   -webkit-text-size-adjust: 100%;
 }
@@ -37,5 +35,4 @@ body {
     radial-gradient(ellipse at 50% -20%, #1a1a24 0%, var(--bg-primary) 60%),
     radial-gradient(circle at 100% 100%, var(--bg-alt) 0%, var(--bg-primary) 50%);
   background-attachment: fixed;
-  overscroll-behavior-y: none; /* Prevent rubber-banding on mobile browsers */
 }
