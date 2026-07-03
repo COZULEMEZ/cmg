@@ -231,11 +231,11 @@ const Home = () => {
             {settings.home_subtitle || 'Spotify, Apple Music ve 150+ platformda profesyonel müzik dağıtımı. Etiket yönetimi, telif koruması ve gelir analizi tek çatı altında.'}
           </motion.p>
           <motion.div className="hero-actions" variants={fadeUp}>
-            <Link to="/basvuru" className="liquid-btn-wrap">
+            <a href="#features" className="liquid-btn-wrap">
               <div className="liquid-btn">
                 <span>Hemen Başlayın &rarr;</span>
               </div>
-            </Link>
+            </a>
             <a href="#features" className="liquid-btn-secondary">
               <Play size={16} />
               <span>Sistem Nasıl Çalışır?</span>
@@ -400,14 +400,14 @@ const Home = () => {
           <h2 className="cta-title">{settings.home_cta_title || 'Kariyerinizi Ölçeklendirin'}</h2>
           <p className="cta-sub">{settings.home_cta_sub || 'Profesyonel dağıtım ağına katılın. Başvurunuzu yapın ve eserlerinizi global standartlarda yönetmeye başlayın.'}</p>
           <div className="cta-actions">
-            <Link to="/basvuru" className="liquid-btn-wrap">
+            <a href={`mailto:${settings.contact_email || 'info@cozulemezmusicgroup.com'}`} className="liquid-btn-wrap">
               <div className="liquid-btn">
                 <span>Sanatçı Başvurusu Yapın</span>
               </div>
-            </Link>
-            <Link to="/iletisim" className="cta-link">
+            </a>
+            <a href={`mailto:${settings.contact_email || 'info@cozulemezmusicgroup.com'}`} className="cta-link">
               Bizimle İletişime Geçin <ArrowRight size={14} />
-            </Link>
+            </a>
           </div>
         </GlassCard>
       </motion.section>
