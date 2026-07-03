@@ -1,18 +1,18 @@
 .liquid-navbar-wrapper {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 1.5rem;
   transition: padding 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-bottom: 1rem; /* compensation */
 }
 
 .liquid-navbar-wrapper.scrolled {
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .liquid-navbar {

@@ -24,11 +24,11 @@ const Video = () => {
   }, []);
 
   return (
-    <section className="section" style={{ padding: 0, height: '100svh', background: '#000', overflow: 'hidden' }}>
+    <section className="section" style={{ padding: 0, background: '#000', overflow: 'hidden' }}>
       <div 
         ref={containerRef}
-        className="video-container" 
-        style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        className="video-wrapper" 
+        style={{ position: 'relative', width: '100%', aspectRatio: '16 / 9', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       >
         {!loadIframe && (
           <div className="thumbnail" style={{ position: 'absolute', inset: 0, background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }} onClick={() => setLoadIframe(true)}>
@@ -44,7 +44,7 @@ const Video = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen
             loading="lazy"
-            style={{ position: 'absolute', width: '100%', height: '56.25vw', minHeight: '100svh', minWidth: '177.77vh', pointerEvents: 'none' }}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
           ></iframe>
         )}
 
