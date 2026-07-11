@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "team": "Kadromuz",
+    "services": "Hizmetler",
+    "apply": "Başvuru",
+    "contact": "İletişim",
+    "faq": "S.S.S."
+  },
+  "hero": {
+    "badge": "Global Dijital Müzik Dağıtımı & Plak Şirketi",
+    "title": "Müziğinizi Dünyaya Açın. Tüm Telif Gelirlerinizi Koruyun.",
+    "subtitle": "CMG, bağımsız sanatçılar için tasarlanmış kurumsal bir müzik dağıtım platformu ve plak şirketidir. Eserlerinizi 24 saat içinde Spotify, Apple Music, TikTok, YouTube Music ve 150'den fazla dijital platformda yayınlayın. Resmî Sanatçı Kanalı (OAC), lisanslama ve editoryal çalma listesi avantajlarını hemen keşfedin.",
+    "cta": "Hemen Şarkı Yayınla &rarr;",
+    "secondary_cta": "Sanatçı Hizmetlerimiz",
+    "stat_label": "Aylık Spotify Akışı (Streaming)",
+    "stat_growth": "↑ Algoritmik Oynatma Listesi Tetikleyicisi"
+  },
+  "stats": {
+    "stat1_val": "150+",
+    "stat1_lbl": "Küresel Platform (Spotify, Apple, TikTok)",
+    "stat2_val": "%100",
+    "stat2_lbl": "Sanatçıya Kalan Telif Hakkı",
+    "stat3_val": "24s",
+    "stat3_lbl": "Hızlı Dijital Müzik Dağıtım Süresi",
+    "stat4_val": "PRO",
+    "stat4_lbl": "Resmi Sanatçı Kanalı (OAC) Desteği"
+  },
+  "features": {
+    "title": "Kurumsal Sanatçı Servisleri & Plak Şirketi Altyapısı",
+    "subtitle": "Cozulemez Music Group (CMG), bağımsız müzisyenlere ve müzik yapım şirketlerine; global dağıtım, telif hakları yönetimi ve müzik yayıncılığı konularında en sağlam ve gelişmiş teknik altyapıyı sunar.",
+    "f1_title": "Global Dijital Müzik Dağıtımı",
+    "f1_desc": "Müziğinizi Spotify, Apple Music, Tidal, Amazon Music ve dünya çapındaki 150+ dijital platforma ulaştırın. Algoritmik çalma listeleriyle tam uyumlu, kesintisiz ve hızlı teslimat.",
+    "f2_title": "Detaylı Analitik & Dinleyici İstatistikleri",
+    "f2_desc": "CMG Paneli üzerinden anlık dinlenme verilerine, demografik kitle analizlerine ve Spotify for Artists ile Apple Music çalma listesi izlemelerine doğrudan ulaşın.",
+    "f3_title": "Müzik Yayıncılığı & Telif Koruma (Copyright)",
+    "f3_desc": "Mekanik ve performans telif haklarınızı profesyonelce yönetin. ISRC ve UPC verilerinizi uluslararası PRO veri tabanlarına işliyor, YouTube Content ID üzerinden kazancınızı güvence altına alıyoruz.",
+    "f4_title": "Bağımsız Plak Şirketi (Label) Çözümleri",
+    "f4_desc": "Müzik şirketleri (Record Labels) için B2B katalog yönetimi altyapısı. Karmaşık sanatçı avansları, gider kesintileri ve telif paylaşımlarını (Royalty Splits) otomatikleştirin.",
+    "f5_title": "Anında Telif Ödemeleri & Gelir Yönetimi",
+    "f5_desc": "Dijital dağıtım gelirlerinizin %100'e varan kısmını elinizde tutun. Gizli kesintiler yok. Müziğinizden kazandığınız parayı güvenilir global ödeme ağları üzerinden anında çekin.",
+    "f6_title": "Müzik Pazarlaması & Sanatçı Markalaşması",
+    "f6_desc": "Discover Weekly gibi algoritmik çalma listelerini tetikleyin. Veri odaklı dijital PR, TikTok pazarlaması, Sync Lisanslama ve Resmi YouTube Sanatçı Kanalı (OAC) doğrulama süreçlerinizi biz yürütüyoruz."
+  }
+}

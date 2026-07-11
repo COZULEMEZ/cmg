@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "team": "Our Team",
+    "services": "Services",
+    "apply": "Apply",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "badge": "Global Digital Music Distribution & Publishing",
+    "title": "Distribute Your Music Worldwide. Keep 100% Royalties.",
+    "subtitle": "CMG is an enterprise-grade music distributor and independent record label. Upload your music to Spotify, Apple Music, TikTok, YouTube Music, and over 150 streaming platforms in 24 hours. Unlock official artist channels, sync licensing, and playlist pitching.",
+    "cta": "Release Your Music &rarr;",
+    "secondary_cta": "Artist Services",
+    "stat_label": "Spotify Streaming Royalties",
+    "stat_growth": "↑ Algorithm Playlist Triggers"
+  },
+  "stats": {
+    "stat1_val": "150+",
+    "stat1_lbl": "Global DSPs (Spotify, Apple, TikTok)",
+    "stat2_val": "100%",
+    "stat2_lbl": "Artist Royalties Retained",
+    "stat3_val": "24h",
+    "stat3_lbl": "Fast Music Distribution Speed",
+    "stat4_val": "PRO",
+    "stat4_lbl": "Official Artist Channel (OAC) Support"
+  },
+  "features": {
+    "title": "Enterprise-Grade Artist Services & Label Infrastructure",
+    "subtitle": "Cozulemez Music Group (CMG) provides independent artists and record companies with the most robust technical infrastructure for music publishing, global distribution, and royalty management.",
+    "f1_title": "Global Digital Music Distribution",
+    "f1_desc": "Distribute your music to Spotify, Apple Music, Tidal, Amazon Music, and 150+ Digital Service Providers (DSPs) worldwide. Fast, reliable, and algorithmic playlist ready.",
+    "f2_title": "Streaming Analytics & Demographics",
+    "f2_desc": "Access real-time stream counts, listener demographics, and playlist tracking for Spotify for Artists and Apple Music directly from the CMG Dashboard.",
+    "f3_title": "Music Publishing & Copyright Protection",
+    "f3_desc": "Administer your mechanical and performance royalties. We register your ISRC/UPC metadata with global PROs and manage YouTube Content ID monetization.",
+    "f4_title": "Independent Record Label Solutions",
+    "f4_desc": "White-label B2B catalog management for indie record labels. Automate complex royalty splits, artist advances, and expense recoupments effortlessly.",
+    "f5_title": "Instant Royalty Payouts",
+    "f5_desc": "Keep up to 100% of your digital distribution royalties. No hidden fees. Withdraw your music monetization earnings via secure global payment gateways.",
+    "f6_title": "Music Marketing & Artist Branding",
+    "f6_desc": "Trigger algorithmic playlists like Discover Weekly. We execute digital PR, TikTok marketing, sync licensing pitching, and Official Artist Channel (OAC) verification."
+  }
+}
