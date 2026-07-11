@@ -27,21 +27,21 @@ const Hero = ({ settings }) => {
         >
           <motion.div className="hero-badge" variants={fadeUp}>
             <Star size={12} />
-            <span>{settings?.home_badge || "Türkiye'nin #1 Müzik Dağıtım Platformu"}</span>
+            <span>{settings?.home_badge || "Global Digital Music Distribution & Publishing"}</span>
           </motion.div>
           <motion.h1 className="hero-title" variants={fadeUp}>
-            {settings?.home_title || 'Müziğinizi Dünyaya Açın'}
+            {settings?.home_title || 'Distribute Your Music Worldwide. Keep 100% Royalties.'}
           </motion.h1>
           <motion.p className="hero-subtitle" variants={fadeUp}>
-            {settings?.home_subtitle || 'Spotify, Apple Music ve 150+ platformda profesyonel müzik dağıtımı.'}
+            {settings?.home_subtitle || 'CMG is an enterprise-grade music distributor and independent record label. Upload your music to Spotify, Apple Music, TikTok, YouTube Music, and over 150 streaming platforms in 24 hours. Unlock official artist channels, sync licensing, and playlist pitching.'}
           </motion.p>
           <motion.div className="hero-actions" variants={fadeUp} style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
             <Link to="/basvuru" className="button" style={{ background: '#fff', color: '#000', textDecoration: 'none', fontWeight: 600 }}>
-              Hemen Başlayın &rarr;
+              Release Your Music &rarr;
             </Link>
             <a href="#features" className="button" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', textDecoration: 'none' }}>
               <Play size={16} style={{ marginRight: '8px' }} />
-              Sistem Nasıl Çalışır?
+              Artist Services
             </a>
           </motion.div>
         </motion.div>
@@ -56,11 +56,11 @@ const Hero = ({ settings }) => {
             <GlassCard className="hero-dashboard" padding="lg" style={{ willChange: 'transform, opacity' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem' }}>
                 <div>
-                  <p style={{ color: '#888', fontSize: '0.8rem', textTransform: 'uppercase' }}>Toplam Akış (Aylık)</p>
-                  <h2 style={{ fontSize: '3rem', margin: '0.5rem 0' }}>2.4M</h2>
-                  <span style={{ color: '#4ade80', fontSize: '0.9rem' }}>↑ +18% büyüme</span>
+                  <p style={{ color: '#888', fontSize: '0.8rem', textTransform: 'uppercase' }}>Spotify Streaming Royalties</p>
+                  <h2 style={{ fontSize: '3rem', margin: '0.5rem 0' }}><data value="2400000">2.4M</data></h2>
+                  <span style={{ color: '#4ade80', fontSize: '0.9rem' }}>↑ Algorithm Playlist Triggers</span>
                 </div>
-                <BarChart3 size={24} />
+                <BarChart3 size={24} aria-label="Music Analytics Graph" />
               </div>
               <div style={{ display: 'flex', gap: '8px', height: '100px', alignItems: 'flex-end', marginBottom: '2rem' }}>
                 {[40, 65, 45, 80, 60, 90, 70, 85, 95, 75, 88, 92].map((h, i) => (

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import GlassCard from '../components/GlassCard';
 
 const stats = [
-  { value: '150+', label: 'Küresel Dağıtım Ağı' },
-  { value: '50+', label: 'Aktif Sanatçı' },
-  { value: '1.500+', label: 'Lisanslı Eser' },
-  { value: '%99.9', label: 'Sistem Çalışma Süresi' },
+  { value: '150+', label: 'Global DSPs (Spotify, Apple, TikTok)' },
+  { value: '100%', label: 'Artist Royalties Retained' },
+  { value: '24h', label: 'Fast Music Distribution Speed' },
+  { value: 'PRO', label: 'Official Artist Channel (OAC) Support' },
 ];
 
 const containerVariants = {
