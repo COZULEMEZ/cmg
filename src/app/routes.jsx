@@ -9,6 +9,8 @@ const Services = lazy(() => import('../pages/Services'));
 const Application = lazy(() => import('../pages/Application'));
 const Contact = lazy(() => import('../pages/Contact'));
 const FAQCenter = lazy(() => import('../pages/FAQCenter'));
+const LandingPageTemplate = lazy(() => import('../pages/LandingPageTemplate'));
+import { seoPages } from '../data/seoPages';
 import { PrivacyPolicy, TermsOfUse, CopyrightNotice, CookiePolicy, KvkkPolicy } from '../pages/Legal';
 
 const PageLoader = () => (
@@ -29,6 +31,10 @@ const AppRoutes = () => {
           <Route path="/basvuru" element={<Application />} />
           <Route path="/iletisim" element={<Contact />} />
           <Route path="/faq" element={<FAQCenter />} />
+          
+          {/* SEO Commercial Landing Pages */}
+          <Route path="/spotify-distribution" element={<LandingPageTemplate pageData={seoPages.spotifyDistribution} />} />
+          <Route path="/music-distribution" element={<LandingPageTemplate pageData={seoPages.musicDistribution} />} />
           
           <Route path="/gizlilik" element={<PrivacyPolicy />} />
           <Route path="/sartlar" element={<TermsOfUse />} />
