@@ -34,9 +34,15 @@ export const LanguageProvider = ({ children }) => {
       if (storedLang && (storedLang === 'tr' || storedLang === 'en')) {
         targetLang = storedLang;
       } else {
-        // Detect browser language
-        const browserLang = navigator.language.toLowerCase();
-        if (browserLang.startsWith('tr')) {
+        // 1. Detect Timezone (Geo-IP alternative)
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const isTurkey = timeZone === 'Europe/Istanbul';
+        
+        // 2. Detect browser language
+        const browserLang = navigator.language || navigator.userLanguage;
+        const isTurkishBrowser = browserLang && browserLang.toLowerCase().startsWith('tr');
+        
+        if (isTurkey || isTurkishBrowser) {
           targetLang = 'tr';
         }
       }

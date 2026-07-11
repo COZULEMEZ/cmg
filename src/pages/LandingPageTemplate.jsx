@@ -56,10 +56,10 @@ const LandingPageTemplate = ({ pageData }) => {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
             style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}
           >
-            <motion.h1 variants={fadeUp} style={{ fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: 1.1 }}>
+            <motion.h1 variants={fadeUp} style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', marginBottom: '1.5rem', lineHeight: 1.1, wordBreak: 'break-word' }}>
               {data.h1}
             </motion.h1>
-            <motion.p variants={fadeUp} style={{ fontSize: '1.25rem', color: '#888', marginBottom: '2.5rem', lineHeight: 1.6 }}>
+            <motion.p variants={fadeUp} style={{ fontSize: 'clamp(1rem, 3vw, 1.25rem)', color: '#888', marginBottom: '2.5rem', lineHeight: 1.6 }}>
               {data.subtitle}
             </motion.p>
             <motion.div variants={fadeUp}>

@@ -37,7 +37,7 @@ const Hero = () => {
           <motion.p className="hero-subtitle" variants={fadeUp}>
             {t('hero.subtitle')}
           </motion.p>
-          <motion.div className="hero-actions" variants={fadeUp} style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
+          <motion.div className="hero-actions" variants={fadeUp} style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '2rem' }}>
             <Link to="/basvuru" className="button" style={{ background: '#fff', color: '#000', textDecoration: 'none', fontWeight: 600 }}>
               {t('hero.cta')}
             </Link>
