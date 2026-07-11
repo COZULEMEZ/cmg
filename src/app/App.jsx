@@ -5,12 +5,16 @@ import AppRoutes from './routes';
 import ScrollToTop from '../components/ScrollToTop';
 import '../styles/globals.css';
 
+import { LanguageProvider } from '../i18n/LanguageContext';
+
 function App() {
   return (
     <AppProviders>
       <Router>
-        <ScrollToTop />
-        <AppRoutes />
+        <LanguageProvider>
+          <ScrollToTop />
+          <AppRoutes />
+        </LanguageProvider>
       </Router>
     </AppProviders>
   );

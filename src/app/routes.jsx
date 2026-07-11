@@ -8,6 +8,7 @@ const Team = lazy(() => import('../pages/Team'));
 const Services = lazy(() => import('../pages/Services'));
 const Application = lazy(() => import('../pages/Application'));
 const Contact = lazy(() => import('../pages/Contact'));
+const FAQCenter = lazy(() => import('../pages/FAQCenter'));
 import { PrivacyPolicy, TermsOfUse, CopyrightNotice, CookiePolicy, KvkkPolicy } from '../pages/Legal';
 
 const PageLoader = () => (
@@ -27,6 +28,7 @@ const AppRoutes = () => {
           <Route path="/hizmetler" element={<Services />} />
           <Route path="/basvuru" element={<Application />} />
           <Route path="/iletisim" element={<Contact />} />
+          <Route path="/faq" element={<FAQCenter />} />
           
           <Route path="/gizlilik" element={<PrivacyPolicy />} />
           <Route path="/sartlar" element={<TermsOfUse />} />

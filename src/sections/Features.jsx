@@ -2,39 +2,7 @@ import React from 'react';
 import { Globe, TrendingUp, Shield, Users, Zap, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import GlassCard from '../components/GlassCard';
-
-const features = [
-  {
-    icon: <Globe size={28} aria-hidden="true" />,
-    title: 'Global Digital Music Distribution',
-    desc: "Distribute your music to Spotify, Apple Music, Tidal, Amazon Music, and 150+ Digital Service Providers (DSPs) worldwide. Fast, reliable, and algorithmic playlist ready.",
-  },
-  {
-    icon: <TrendingUp size={28} aria-hidden="true" />,
-    title: 'Streaming Analytics & Demographics',
-    desc: 'Access real-time stream counts, listener demographics, and playlist tracking for Spotify for Artists and Apple Music directly from the CMG Dashboard.',
-  },
-  {
-    icon: <Shield size={28} aria-hidden="true" />,
-    title: 'Music Publishing & Copyright Protection',
-    desc: 'Administer your mechanical and performance royalties. We register your ISRC/UPC metadata with global PROs and manage YouTube Content ID monetization.',
-  },
-  {
-    icon: <Users size={28} aria-hidden="true" />,
-    title: 'Independent Record Label Solutions',
-    desc: 'White-label B2B catalog management for indie record labels. Automate complex royalty splits, artist advances, and expense recoupments effortlessly.',
-  },
-  {
-    icon: <Zap size={28} aria-hidden="true" />,
-    title: 'Instant Royalty Payouts',
-    desc: 'Keep up to 100% of your digital distribution royalties. No hidden fees. Withdraw your music monetization earnings via secure global payment gateways.',
-  },
-  {
-    icon: <BarChart3 size={28} aria-hidden="true" />,
-    title: 'Music Marketing & Artist Branding',
-    desc: 'Trigger algorithmic playlists like Discover Weekly. We execute digital PR, TikTok marketing, sync licensing pitching, and Official Artist Channel (OAC) verification.',
-  },
-];
+import { useLanguage } from '../i18n/LanguageContext';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,7 +14,42 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
 };
 
-const Features = ({ settings }) => {
+const Features = () => {
+  const { t } = useLanguage();
+
+  const features = [
+    {
+      icon: <Globe size={28} aria-hidden="true" />,
+      title: t('features.f1_title'),
+      desc: t('features.f1_desc'),
+    },
+    {
+      icon: <TrendingUp size={28} aria-hidden="true" />,
+      title: t('features.f2_title'),
+      desc: t('features.f2_desc'),
+    },
+    {
+      icon: <Shield size={28} aria-hidden="true" />,
+      title: t('features.f3_title'),
+      desc: t('features.f3_desc'),
+    },
+    {
+      icon: <Users size={28} aria-hidden="true" />,
+      title: t('features.f4_title'),
+      desc: t('features.f4_desc'),
+    },
+    {
+      icon: <Zap size={28} aria-hidden="true" />,
+      title: t('features.f5_title'),
+      desc: t('features.f5_desc'),
+    },
+    {
+      icon: <BarChart3 size={28} aria-hidden="true" />,
+      title: t('features.f6_title'),
+      desc: t('features.f6_desc'),
+    },
+  ];
+
   return (
     <section id="features" className="section" style={{ padding: '6rem 0' }}>
       <div className="section-inner">
@@ -58,10 +61,10 @@ const Features = ({ settings }) => {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <h2 style={{ fontSize: 'var(--text-xl)', marginBottom: '1rem' }}>
-            {settings?.features_title || 'Enterprise-Grade Artist Services & Label Infrastructure'}
+            {t('features.title')}
           </h2>
           <p style={{ color: '#888', maxWidth: '600px', margin: '0 auto' }}>
-            {settings?.features_subtitle || 'Cozulemez Music Group (CMG) provides independent artists and record companies with the most robust technical infrastructure for music publishing, global distribution, and royalty management.'}
+            {t('features.subtitle')}
           </p>
         </motion.div>
         

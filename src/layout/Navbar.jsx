@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 import './Navbar.css';
 
 const Navbar = () => {
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -24,19 +26,18 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="navbar-links">
-          <Link to="/">Ana Sayfa</Link>
-          <Link to="/hakkimizda">Hakkımızda</Link>
-          <Link to="/kadromuz">Kadromuz</Link>
-          <Link to="/hizmetler">Hizmetler</Link>
-          <Link to="/basvuru">Başvuru</Link>
-          <Link to="/iletisim">İletişim</Link>
+          <Link to="/">{t('nav.home')}</Link>
+          <Link to="/hakkimizda">{t('nav.about')}</Link>
+          <Link to="/kadromuz">{t('nav.team')}</Link>
+          <Link to="/hizmetler">{t('nav.services')}</Link>
+          <Link to="/faq">{t('nav.faq')}</Link>
+          <Link to="/iletisim">{t('nav.contact')}</Link>
         </div>
 
         {/* Actions */}
         <div className="navbar-actions">
-
           <Link to="/basvuru" className="navbar-register">
-            Başvuru Yap
+            {t('nav.apply')}
           </Link>
         </div>
 
@@ -49,15 +50,15 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="glass-pill mobile-menu">
-          <Link to="/" onClick={() => setMobileOpen(false)}>Ana Sayfa</Link>
-          <Link to="/hakkimizda" onClick={() => setMobileOpen(false)}>Hakkımızda</Link>
-          <Link to="/kadromuz" onClick={() => setMobileOpen(false)}>Kadromuz</Link>
-          <Link to="/hizmetler" onClick={() => setMobileOpen(false)}>Hizmetler</Link>
-          <Link to="/basvuru" onClick={() => setMobileOpen(false)}>Başvuru</Link>
-          <Link to="/iletisim" onClick={() => setMobileOpen(false)}>İletişim</Link>
+          <Link to="/" onClick={() => setMobileOpen(false)}>{t('nav.home')}</Link>
+          <Link to="/hakkimizda" onClick={() => setMobileOpen(false)}>{t('nav.about')}</Link>
+          <Link to="/kadromuz" onClick={() => setMobileOpen(false)}>{t('nav.team')}</Link>
+          <Link to="/hizmetler" onClick={() => setMobileOpen(false)}>{t('nav.services')}</Link>
+          <Link to="/faq" onClick={() => setMobileOpen(false)}>{t('nav.faq')}</Link>
+          <Link to="/iletisim" onClick={() => setMobileOpen(false)}>{t('nav.contact')}</Link>
           <hr className="mobile-divider" />
           <Link to="/basvuru" className="navbar-register" onClick={() => setMobileOpen(false)}>
-            Başvuru Yap
+            {t('nav.apply')}
           </Link>
         </div>
       )}

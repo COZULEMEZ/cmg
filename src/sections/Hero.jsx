@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import { Star, Play, BarChart3, ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import GlassCard from '../components/GlassCard';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const fadeUp = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } }
 };
 
-const Hero = ({ settings }) => {
+const Hero = () => {
+  const { t } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -27,21 +29,21 @@ const Hero = ({ settings }) => {
         >
           <motion.div className="hero-badge" variants={fadeUp}>
             <Star size={12} />
-            <span>{settings?.home_badge || "Global Digital Music Distribution & Publishing"}</span>
+            <span>{t('hero.badge')}</span>
           </motion.div>
           <motion.h1 className="hero-title" variants={fadeUp}>
-            {settings?.home_title || 'Distribute Your Music Worldwide. Keep 100% Royalties.'}
+            {t('hero.title')}
           </motion.h1>
           <motion.p className="hero-subtitle" variants={fadeUp}>
-            {settings?.home_subtitle || 'CMG is an enterprise-grade music distributor and independent record label. Upload your music to Spotify, Apple Music, TikTok, YouTube Music, and over 150 streaming platforms in 24 hours. Unlock official artist channels, sync licensing, and playlist pitching.'}
+            {t('hero.subtitle')}
           </motion.p>
           <motion.div className="hero-actions" variants={fadeUp} style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
             <Link to="/basvuru" className="button" style={{ background: '#fff', color: '#000', textDecoration: 'none', fontWeight: 600 }}>
-              Release Your Music &rarr;
+              {t('hero.cta')}
             </Link>
             <a href="#features" className="button" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', textDecoration: 'none' }}>
               <Play size={16} style={{ marginRight: '8px' }} />
-              Artist Services
+              {t('hero.secondary_cta')}
             </a>
           </motion.div>
         </motion.div>
@@ -56,9 +58,9 @@ const Hero = ({ settings }) => {
             <GlassCard className="hero-dashboard" padding="lg" style={{ willChange: 'transform, opacity' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem' }}>
                 <div>
-                  <p style={{ color: '#888', fontSize: '0.8rem', textTransform: 'uppercase' }}>Spotify Streaming Royalties</p>
+                  <p style={{ color: '#888', fontSize: '0.8rem', textTransform: 'uppercase' }}>{t('hero.stat_label')}</p>
                   <h2 style={{ fontSize: '3rem', margin: '0.5rem 0' }}><data value="2400000">2.4M</data></h2>
-                  <span style={{ color: '#4ade80', fontSize: '0.9rem' }}>↑ Algorithm Playlist Triggers</span>
+                  <span style={{ color: '#4ade80', fontSize: '0.9rem' }}>{t('hero.stat_growth')}</span>
                 </div>
                 <BarChart3 size={24} aria-label="Music Analytics Graph" />
               </div>

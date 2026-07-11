@@ -1,22 +1,17 @@
 import React from 'react';
-import { useSettings } from '../../context/SettingsContext';
 import Hero from '../../sections/Hero';
 import Stats from '../../sections/Stats';
 import Features from '../../sections/Features';
-import FAQ from '../../sections/FAQ';
-import SemanticFooter from '../../sections/SemanticFooter';
+import ShortFAQ from '../../sections/ShortFAQ';
 import './index.css';
 
 const Home = () => {
-  const { settings } = useSettings();
-
   return (
     <div className="page" style={{ width: '100%' }}>
-      <Hero settings={settings} />
+      <Hero />
       <Stats />
-      <Features settings={settings} />
-      <FAQ />
-      <SemanticFooter />
+      <Features />
+      <ShortFAQ />
     </div>
   );
 };

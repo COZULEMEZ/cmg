@@ -1,13 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import GlassCard from '../components/GlassCard';
-
-const stats = [
-  { value: '150+', label: 'Global DSPs (Spotify, Apple, TikTok)' },
-  { value: '100%', label: 'Artist Royalties Retained' },
-  { value: '24h', label: 'Fast Music Distribution Speed' },
-  { value: 'PRO', label: 'Official Artist Channel (OAC) Support' },
-];
+import { useLanguage } from '../i18n/LanguageContext';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -20,6 +14,14 @@ const itemVariants = {
 };
 
 const Stats = () => {
+  const { t } = useLanguage();
+  
+  const stats = [
+    { value: t('stats.stat1_val'), label: t('stats.stat1_lbl') },
+    { value: t('stats.stat2_val'), label: t('stats.stat2_lbl') },
+    { value: t('stats.stat3_val'), label: t('stats.stat3_lbl') },
+    { value: t('stats.stat4_val'), label: t('stats.stat4_lbl') },
+  ];
   return (
     <section className="section" style={{ padding: '4rem 0' }}>
       <motion.div 
