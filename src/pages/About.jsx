@@ -59,6 +59,16 @@ const About = () => {
             <div className="card-header-icon"><ShieldCheck size={32} /></div>
             <h2>Kurumsal Hikayemiz</h2>
             <p>{settings.about_company_story || 'CMG, müziğin evrensel dilini dijital dünyanın sınırsız gücüyle birleştirmek amacıyla kuruldu. Özenle seçilmiş 50 bağımsız sanatçımız için şeffaf, hızlı ve butik bir dağıtım ekosistemi sunuyoruz.'}</p>
+            
+            <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'linear-gradient(135deg, #7e14ff, #47bfff)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '1.2rem', color: '#fff' }}>
+                MK
+              </div>
+              <div>
+                <h4 style={{ margin: 0, fontSize: '1.1rem', color: '#fff' }}>Mustafa Kara <span style={{ opacity: 0.6, fontSize: '0.9rem', fontWeight: 'normal' }}>(Cozulemez)</span></h4>
+                <div style={{ color: '#888', fontSize: '0.9rem' }}>Kurucu & CEO</div>
+              </div>
+            </div>
           </GlassCard>
         </motion.div>
 
