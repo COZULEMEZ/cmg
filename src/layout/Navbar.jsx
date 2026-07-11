@@ -26,6 +26,7 @@ const Navbar = () => {
         <div className="navbar-links">
           <Link to="/">Ana Sayfa</Link>
           <Link to="/hakkimizda">Hakkımızda</Link>
+          <Link to="/kadromuz">Kadromuz</Link>
           <Link to="/hizmetler">Hizmetler</Link>
           <Link to="/basvuru">Başvuru</Link>
           <Link to="/iletisim">İletişim</Link>
@@ -50,6 +51,7 @@ const Navbar = () => {
         <div className="glass-pill mobile-menu">
           <Link to="/" onClick={() => setMobileOpen(false)}>Ana Sayfa</Link>
           <Link to="/hakkimizda" onClick={() => setMobileOpen(false)}>Hakkımızda</Link>
+          <Link to="/kadromuz" onClick={() => setMobileOpen(false)}>Kadromuz</Link>
           <Link to="/hizmetler" onClick={() => setMobileOpen(false)}>Hizmetler</Link>
           <Link to="/basvuru" onClick={() => setMobileOpen(false)}>Başvuru</Link>
           <Link to="/iletisim" onClick={() => setMobileOpen(false)}>İletişim</Link>
